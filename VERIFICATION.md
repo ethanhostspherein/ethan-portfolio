@@ -1,5 +1,13 @@
 # Website verification
 
+## GitHub Pages deployment and project update — 6 October 2026
+
+Created the owner's requested public repository `ethanhostspherein/ethan-portfolio` and enabled GitHub Pages with HTTPS and GitHub Actions publishing. Deployment run 37426044093 completed successfully. Live website: https://ethanhostspherein.github.io/ethan-portfolio/ .
+
+Added Deshboard as a fifth project, with its public dashboard screenshot, details, source link and Civic technology filter. Updated HostOS to https://hostos.hostizzy.com/ and replaced its old login preview with the public HostSuite homepage. Descriptions were checked against the supplied public websites.
+
+Introduced deployment-base-aware public asset paths. Verified the repository path locally, then verified the published website: startup → login → Work → Deshboard details; HostOS details link equals the supplied root URL; all project previews and app icons load; canonical and social image URLs contain the repository path; mobile document width equals 390 px without horizontal overflow; console has no warnings or errors. Restored the original localhost preview build. Live screenshot: `../portfolio-live.jpg`.
+
 ## Current Apple icon and branding revision — 6 October 2026
 
 This revision supersedes all earlier references below to original application artwork, the EB system mark, and exclusion of Apple assets. At the owner's explicit request, Apple-published native app icons now appear across the desktop, dock, launcher, Spotlight and application switcher. The Apple silhouette appears in the menu bar, startup/restart screen, and About This Mac. Asset provenance is recorded in `public/macos/sources.json`. Owner-supplied photographs remain in login, Settings and About.

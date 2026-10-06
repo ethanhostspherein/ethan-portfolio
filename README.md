@@ -4,6 +4,15 @@ A real responsive React website with a custom desktop window manager. Deploy the
 
 Entry sequence: a brief Apple startup screen, Ethan's photo login screen, then the interactive desktop. No password or account is required.
 
+## Published website
+
+- Website: https://ethanhostspherein.github.io/ethan-portfolio/
+- Repository: https://github.com/ethanhostspherein/ethan-portfolio
+- Pushes to `main` build and publish automatically with `.github/workflows/deploy.yml`.
+- Portfolio projects include Hostizzy, JuxTravel, ResIQ, HostOS / HostSuite, and Deshboard.
+
+The workflow reads the GitHub Pages URL and base path automatically. This keeps images, downloads, canonical metadata and the social preview correct at the project URL or a connected custom domain.
+
 ## Run locally
 
 ```sh
