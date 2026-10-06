@@ -1,0 +1,14 @@
+{
+  "apps": "https://ipcdn-web.apple.com/assets/v2/web/c21fff46-091c-4cd9-8841-54e864775d38",
+  "contacts": "https://ipcdn-web.apple.com/assets/v2/web/6d65edb6-6313-483c-b0ba-01a41f195df0",
+  "mail": "https://ipcdn-web.apple.com/assets/v2/web/92b3abdb-3c75-4ab3-a85b-af40696ecc9d",
+  "maps": "https://ipcdn-web.apple.com/assets/v2/web/f2137181-ee5a-4dc1-9783-6103f4132458",
+  "notes": "https://ipcdn-web.apple.com/assets/v2/web/b08f38fa-c1f2-42af-8b03-8b5abfbd7f1a",
+  "preview": "https://ipcdn-web.apple.com/assets/v2/web/dfee9196-edb1-4c18-a12d-f0c0bd40016a",
+  "safari": "https://ipcdn-web.apple.com/assets/v2/web/af1252fa-2ee4-4e7b-a197-6253cd94c56d",
+  "settings": "https://ipcdn-web.apple.com/assets/v2/web/f5de5b19-1ed1-4a8c-8f1c-b84b48347586",
+  "terminal": "https://ipcdn-web.apple.com/assets/v2/web/d958496a-7156-4dcd-b8fc-03d5c22f17a3",
+  "tips": "https://ipcdn-web.apple.com/assets/v2/web/6cc897b3-d5aa-4019-b628-3bf18610ff3f",
+  "finder": "https://ipcdn-web.apple.com/assets/v2/web/f2ab6839-b5a7-45f8-bcb3-037aa7887965",
+  "apple": "https://support.apple.com/en-mk/guide/mac-help/mchl110b00b7/mac"
+}

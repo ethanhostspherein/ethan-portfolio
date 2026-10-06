@@ -1,0 +1,484 @@
+/* System chrome uses the host's native UI font; portfolio content stays editorial. */
+.menu-bar,
+.menu-dropdown,
+.window-bar,
+.dock-tooltip,
+.app-toolbar,
+.finder aside,
+.notes aside,
+.mail-heading,
+.desktop-app,
+.lock-screen {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+.menu-bar {
+  height: 30px;
+  background: #18244712;
+  border-bottom: 0;
+  backdrop-filter: blur(20px);
+  padding: 0 18px;
+  text-shadow: 0 1px 3px #050a2b45;
+}
+.menu-left {
+  gap: 20px;
+}
+.menu-left button {
+  font-size: 13px;
+}
+.menu-left .owner {
+  font-size: 13px;
+  font-weight: 650;
+}
+.menu-right time {
+  font-size: 12px;
+}
+.menu-right {
+  gap: 16px;
+}
+.window {
+  border-radius: 12px;
+  border-color: #ffffff80;
+  box-shadow:
+    0 25px 65px #03062065,
+    0 0 0 1px #00000015;
+}
+.window-bar {
+  background: linear-gradient(#f8f8faee, #eeeef2ee);
+  height: 46px;
+  min-height: 46px;
+  backdrop-filter: blur(18px);
+  border-bottom-color: #d9d9df;
+  font-weight: 600;
+}
+.traffic-lights {
+  gap: 8px;
+  left: 16px;
+}
+.traffic-lights button {
+  height: 13px;
+  width: 13px;
+  box-shadow: inset 0 0 0 0.5px #0002;
+}
+.window-title {
+  font-size: 13px;
+}
+.available {
+  font-size: 11px;
+  color: #71717a;
+}
+.desktop-app {
+  font-size: 12px;
+  font-weight: 500;
+  text-shadow: 0 1px 3px #000a;
+  letter-spacing: 0.05px;
+}
+.dock {
+  backdrop-filter: blur(30px) saturate(1.6);
+  bottom: 12px;
+  border-radius: 19px;
+}
+.dock-app.running i {
+  background: #16172a;
+  border: 1px solid #ffffff25;
+  width: 5px;
+  height: 5px;
+}
+@media (max-width: 759px) {
+  .menu-bar {
+    height: 39px;
+    padding: 0 15px;
+  }
+  .menu-left .owner {
+    font-size: 12px;
+  }
+  .menu-right time {
+    font-size: 10px;
+  }
+  .window-bar {
+    min-height: 42px;
+    height: 42px;
+  }
+  .traffic-lights button {
+    width: 22px;
+    height: 22px;
+  }
+  .available {
+    font-size: 8px;
+  }
+  .dock {
+    bottom: 19px;
+  }
+}
+/* The screen edge and camera are decorative; every system control remains HTML. */
+.screen-bezel {
+  position: absolute;
+  inset: 0;
+  z-index: 5000;
+  border: 7px solid #08090c;
+  border-radius: 22px;
+  box-shadow: inset 0 0 0 1px #ffffff18;
+  pointer-events: none;
+}
+.camera-notch {
+  position: absolute;
+  z-index: 5001;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 104px;
+  height: 24px;
+  background: #08090c;
+  border-radius: 0 0 9px 9px;
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+}
+.camera-notch i {
+  width: 5px;
+  height: 5px;
+  background: radial-gradient(circle, #254369, #080e18 65%);
+  border: 1px solid #151d2c;
+  border-radius: 50%;
+}
+.display-dimmer {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  z-index: 4500;
+  pointer-events: none;
+  transition: opacity 0.12s;
+}
+.brand-mark {
+  font:
+    600 17px/1 Georgia,
+    serif !important;
+  letter-spacing: -2px;
+  padding-right: 3px !important;
+}
+.control-toggle {
+  order: 3;
+  padding: 4px 6px;
+  border-radius: 5px;
+}
+.control-toggle.selected {
+  background: #ffffff26;
+}
+.menu-right time {
+  order: 4;
+}
+.control-center {
+  position: absolute;
+  right: 17px;
+  top: 39px;
+  z-index: 1200;
+  width: 320px;
+  padding: 12px;
+  border: 1px solid #ffffff42;
+  border-radius: 18px;
+  backdrop-filter: blur(32px) saturate(1.5);
+  background: linear-gradient(145deg, #263659db, #1b2035e8);
+  box-shadow:
+    0 18px 40px #05071975,
+    inset 0 1px 0 #fff2;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  display: grid;
+  gap: 10px;
+  animation: lock-arrive 0.15s ease;
+}
+.control-network,
+.control-focus,
+.control-brightness {
+  padding: 12px;
+  background: #cbd9f51c;
+  border-radius: 12px;
+  box-shadow: inset 0 0 0 1px #ffffff10;
+}
+.control-network,
+.control-focus {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+}
+.control-symbol {
+  width: 37px;
+  height: 37px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff2;
+}
+.control-network .control-symbol,
+.control-focus.enabled .control-symbol {
+  background: #3585f7;
+}
+.control-center strong {
+  font-weight: 600;
+  font-size: 13px;
+  display: block;
+}
+.control-center small {
+  display: block;
+  font-size: 11px;
+  color: #d4d9eb;
+  margin-top: 3px;
+}
+.control-focus > span:last-child {
+  margin-left: auto;
+  font-size: 11px;
+  color: #dae0ef;
+}
+.control-brightness > span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+.control-brightness input {
+  width: 100%;
+  height: 18px;
+  accent-color: #f3f6ff;
+  cursor: pointer;
+}
+.control-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.control-footer button {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+}
+.focus-mode .sticky-note,
+.focus-mode .desktop-caption,
+.focus-mode .desktop-icons {
+  visibility: hidden;
+}
+.dock-app:hover + .dock-app .native-icon,
+.dock-app:has(+ .dock-app:hover) .native-icon {
+  transform: translateY(-5px) scale(1.1);
+}
+@media (min-width: 760px) {
+  .menu-bar {
+    height: 36px;
+    padding: 7px 24px 0;
+  }
+  .desktop-icons {
+    grid-template-columns: 82px;
+    right: 25px;
+    top: 58px;
+    gap: 9px;
+  }
+  .desktop-app {
+    gap: 2px;
+    padding: 2px 4px;
+  }
+  .desktop-app .native-icon {
+    width: 58px;
+    height: 58px;
+  }
+  .desktop-caption {
+    display: none;
+  }
+  .sticky-note {
+    display: none;
+  }
+  .dock {
+    background: linear-gradient(135deg, #e2e9fa50, #9aa9d730);
+    padding: 9px 13px 6px;
+    gap: 9px;
+  }
+  .dock .native-icon.small {
+    width: 59px;
+    height: 59px;
+  }
+  .lock-clock {
+    top: 12%;
+  }
+  .lock-clock p {
+    font-size: 22px;
+    color: #edf0ff;
+  }
+  .lock-clock time {
+    font-size: 132px;
+    font-weight: 650;
+    letter-spacing: -6px;
+    color: #edf0ffdc;
+  }
+  .lock-profile {
+    top: 57%;
+    width: 300px;
+  }
+  .lock-avatar {
+    width: 86px;
+    height: 86px;
+    border: 2px solid #ffffff8c;
+  }
+  .lock-avatar span {
+    font-size: 47px;
+  }
+  .lock-avatar span + span {
+    margin-left: -12px;
+    translate: 0 8px;
+  }
+  .lock-profile h1 {
+    font-size: 18px;
+    margin-top: 12px;
+  }
+  .lock-profile > p {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  .login-button {
+    margin-top: 18px;
+    width: 235px;
+    height: 38px;
+    font-size: 13px;
+    padding: 0 44px 0 14px;
+    border-radius: 20px;
+    border-color: #ffffff4a;
+    background: #e3e8ff30;
+    box-shadow: inset 0 1px 0 #ffffff20;
+  }
+  .login-arrow {
+    width: 26px;
+    height: 26px;
+    right: 5px;
+    background: #ffffff23;
+    border-color: #ffffff4f;
+  }
+  .login-arrow svg {
+    width: 17px;
+  }
+  .lock-profile > small {
+    font-size: 10px;
+    margin-top: 11px;
+    color: #d0d4e8;
+  }
+  .lock-actions {
+    bottom: 5%;
+    gap: 32px;
+  }
+  .lock-actions button {
+    font-size: 10px;
+    gap: 6px;
+  }
+  .lock-actions button > span {
+    height: 33px;
+    width: 33px;
+    border: 0;
+    background: #ffffff1d;
+  }
+  .lock-actions svg {
+    width: 16px;
+  }
+  .lock-status {
+    top: 25px;
+    right: 29px;
+  }
+  .lock-status svg {
+    width: 19px;
+  }
+}
+@media (min-width: 760px) and (max-height: 800px) {
+  .desktop-icons {
+    gap: 3px;
+    top: 43px;
+  }
+  .desktop-app .native-icon {
+    width: 46px;
+    height: 46px;
+  }
+  .desktop-app {
+    font-size: 10px;
+  }
+  .lock-clock {
+    top: 9%;
+  }
+  .lock-clock time {
+    font-size: 105px;
+  }
+  .lock-clock p {
+    font-size: 18px;
+  }
+  .lock-profile {
+    top: 49%;
+  }
+  .lock-avatar {
+    width: 66px;
+    height: 66px;
+  }
+  .lock-avatar span {
+    font-size: 37px;
+  }
+  .lock-profile h1 {
+    font-size: 16px;
+    margin-top: 9px;
+  }
+  .lock-profile > p {
+    font-size: 11px;
+  }
+  .login-button {
+    margin-top: 14px;
+  }
+  .lock-actions {
+    bottom: 4%;
+  }
+  .dock .native-icon.small {
+    width: 48px;
+    height: 48px;
+  }
+}
+@media (max-width: 759px) {
+  .screen-bezel,
+  .camera-notch {
+    display: none;
+  }
+  .control-center {
+    top: 47px;
+    right: 10px;
+    width: min(320px, calc(100% - 20px));
+  }
+  .control-toggle {
+    display: flex !important;
+  }
+  .menu-right {
+    gap: 10px;
+  }
+  .lock-profile > p {
+    font-size: 12px;
+  }
+  .lock-avatar {
+    width: 90px;
+    height: 90px;
+  }
+  .lock-avatar span {
+    font-size: 48px;
+  }
+  .lock-profile h1 {
+    font-size: 20px;
+  }
+  .login-button {
+    width: 235px;
+    height: 44px;
+    font-size: 13px;
+  }
+  .login-arrow {
+    width: 31px;
+    height: 31px;
+  }
+  .login-arrow svg {
+    width: 18px;
+  }
+  .lock-actions button > span {
+    width: 36px;
+    height: 36px;
+  }
+  .lock-actions button {
+    font-size: 10px;
+  }
+}
