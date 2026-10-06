@@ -1,0 +1,924 @@
+@font-face {
+  font-family: Fraunces;
+  src: url("/fonts/fraunces.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --journal-paper: #f3efe5;
+  --journal-ink: #243c34;
+  --journal-red: #a83a2d;
+  --journal-rule: #d2cec3;
+}
+::selection {
+  background: #c9ddaf;
+  color: #18332b;
+}
+input,
+textarea {
+  caret-color: var(--journal-red);
+}
+a {
+  text-underline-offset: 4px;
+}
+.window-content {
+  scrollbar-color: #aaa99d transparent;
+}
+/* A personal editorial world inside the familiar desktop chrome. */
+.entry-editorial {
+  position: absolute;
+  left: 9%;
+  top: 24%;
+  text-align: left;
+  max-width: 54%;
+}
+.entry-editorial h2 {
+  font:
+    500 clamp(48px, 6vw, 86px)/1.06 Fraunces,
+    Georgia,
+    serif;
+  letter-spacing: -0.025em;
+  color: #fff9e9;
+}
+.entry-editorial h2 em {
+  font-style: normal;
+  color: #d1dfb7;
+}
+.entry-editorial p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #eef0f8;
+  margin-top: 28px;
+}
+.entry-editorial > span {
+  display: block;
+  margin-top: 32px;
+  padding-top: 17px;
+  border-top: 1px solid #ffffff60;
+  width: 220px;
+  font-size: 12px;
+  color: #f1eddf;
+}
+.lock-screen {
+  background: linear-gradient(90deg, #081225bb, #10122d50);
+}
+.lock-clock {
+  left: auto;
+  right: 10%;
+  top: 12%;
+  transform: none;
+  text-align: center;
+}
+.lock-clock p {
+  font-size: 14px;
+  margin: 0 0 7px;
+  color: #eef0f8;
+}
+.lock-clock time {
+  font-size: 66px;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  color: #fff9e9;
+  text-shadow: none;
+}
+.lock-profile {
+  left: auto;
+  right: 6%;
+  top: 38%;
+  width: 330px;
+  transform: none;
+}
+.lock-avatar {
+  width: 106px;
+  height: 106px;
+}
+.lock-profile h1 {
+  font-size: 23px;
+  margin-top: 15px;
+}
+.lock-profile > p {
+  font-size: 14px;
+  color: #eef0f8;
+}
+.lock-profile .login-button {
+  height: 54px;
+  width: 255px;
+  font-size: 15px;
+  margin-top: 24px;
+  padding-left: 18px;
+}
+.login-arrow {
+  height: 38px;
+  width: 38px;
+  right: 7px;
+}
+.lock-profile small {
+  color: #eef0f8;
+  margin-top: 18px;
+  font-size: 11px;
+}
+.lock-actions {
+  bottom: 24px;
+}
+.entry-editorial {
+  animation: entry-focus 850ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes entry-focus {
+  from {
+    filter: blur(6px);
+    clip-path: inset(0 0 25% 0);
+  }
+  to {
+    filter: blur(0);
+    clip-path: inset(0);
+  }
+}
+.editorial-home {
+  background: var(--journal-paper);
+  color: var(--journal-ink);
+  min-height: 100%;
+  padding: 0 32px;
+  --chapter-color: var(--journal-red);
+}
+.home-masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--journal-rule);
+  padding: 16px 0;
+  font-size: 11px;
+  gap: 12px;
+}
+.home-masthead > span:first-child {
+  font-weight: 700;
+  font-size: 13px;
+}
+.home-masthead > span:nth-child(2) {
+  color: #57645b;
+}
+.home-masthead button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  color: var(--journal-red);
+  font-weight: 600;
+}
+.home-cover {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  gap: 32px;
+  padding: 22px 0 20px;
+  align-items: center;
+}
+.home-greeting {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+.home-story h1 {
+  font:
+    500 clamp(36px, 4vw, 56px)/1.07 Fraunces,
+    Georgia,
+    serif;
+  letter-spacing: -0.03em;
+  color: var(--chapter-color);
+  max-width: 510px;
+  margin: 0;
+  white-space: normal;
+  text-wrap: balance;
+}
+.home-description {
+  font-size: 14px;
+  line-height: 1.65;
+  max-width: 410px;
+  margin-top: 22px;
+  color: #3e5147;
+}
+.home-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 13px 0;
+  margin-top: 20px;
+  border-bottom: 1px solid var(--chapter-color);
+  color: var(--chapter-color);
+  font-weight: 600;
+  font-size: 13px;
+  text-align: left;
+}
+.home-cta:hover {
+  color: #6e241c;
+}
+.home-photo {
+  margin: 0;
+  position: relative;
+  align-self: center;
+  transform: rotate(2deg);
+  max-width: 260px;
+  justify-self: end;
+}
+.home-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: contain;
+  border-radius: 2px;
+}
+.home-photo figcaption {
+  font-family: Caveat, cursive;
+  font-size: 19px;
+  margin-top: 8px;
+  text-align: right;
+  color: #445b46;
+}
+.home-chapters {
+  border-top: 1px solid var(--journal-rule);
+  padding: 0 0 20px;
+}
+.home-chapters nav {
+  display: flex;
+  gap: 22px;
+}
+.home-chapters button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 0 13px;
+  border-top: 2px solid transparent;
+  margin-top: -1px;
+  font-size: 12px;
+  color: #546158;
+  transition: color 0.2s;
+}
+.home-chapters button[aria-pressed="true"] {
+  border-color: var(--chapter-color);
+  color: var(--chapter-color);
+  font-weight: 600;
+}
+.home-chapters p {
+  font-size: 11px;
+  color: #546158;
+  padding-top: 4px;
+}
+.chapter-roam {
+  --chapter-color: #3b644b;
+}
+.chapter-play {
+  --chapter-color: #563d80;
+}
+.home-story {
+  animation: chapter-focus 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes chapter-focus {
+  from {
+    opacity: 0.5;
+    filter: blur(3px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+.app-shelf {
+  background: #253e34;
+  color: #f6f1e5;
+  padding: 27px 25px 25px;
+}
+.shelf-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+.shelf-heading h1 {
+  font:
+    500 29px/1.12 Fraunces,
+    Georgia,
+    serif;
+  letter-spacing: -0.025em;
+  max-width: 420px;
+}
+.shelf-heading p {
+  font-size: 12px;
+  color: #d0dbce;
+  margin-top: 8px;
+  line-height: 1.6;
+}
+.shelf-heading svg {
+  flex-shrink: 0;
+  color: #cee0b5;
+}
+.shelf-apps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+}
+.shelf-app {
+  min-width: 0;
+  background: #f3efe5;
+  color: #243c34;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.shelf-preview {
+  display: block;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  background: #ddd;
+}
+.shelf-preview img {
+  display: block;
+  width: 100%;
+  height: 112px;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.shelf-preview:hover img {
+  transform: scale(1.05);
+}
+.shelf-copy {
+  padding: 14px;
+}
+.shelf-copy small {
+  font-size: 9px;
+  color: #5a655b;
+}
+.shelf-copy h2 {
+  font-size: 17px;
+  margin-top: 5px;
+  letter-spacing: -0.02em;
+}
+.shelf-copy p {
+  font-size: 11px;
+  line-height: 1.6;
+  margin: 8px 0 15px;
+  color: #49574e;
+  min-height: 53px;
+}
+.shelf-copy > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #d2cec3;
+  padding-top: 12px;
+}
+.shelf-copy a {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #a83a2d;
+}
+.shelf-copy a:hover {
+  text-decoration: underline;
+}
+.shelf-copy button {
+  padding: 5px;
+  margin: -5px;
+  color: #243c34;
+}
+.play-store-link {
+  background: #253e34 !important;
+  color: #fff !important;
+}
+.finder-main > .project-list {
+  background: #faf9f5;
+}
+.project-detail .detail-copy h1 {
+  font-family: Fraunces, Georgia, serif;
+  font-weight: 500;
+  color: #243c34;
+}
+/* Life changes materials as the visitor moves from journal to workspace. */
+.window .personal-app .personal-eyebrow {
+  display: none;
+}
+.window .personal-app .personal-content h1 {
+  font:
+    500 46px/1.12 Fraunces,
+    Georgia,
+    serif;
+  letter-spacing: -0.025em;
+}
+.window .personal-app .personal-toolbar {
+  background: #eee8dc;
+  border-color: #ccc4b5;
+}
+.window .personal-off-the-clock {
+  background: #f3efe5;
+  color: #243c34;
+}
+.window .personal-off-the-clock .interest-grid {
+  display: flex;
+  gap: 0;
+  border-top: 1px solid #cfc8b9;
+  border-bottom: 1px solid #cfc8b9;
+}
+.window .personal-off-the-clock .interest-grid article {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  padding: 18px 10px;
+  flex: 1;
+}
+.window .personal-off-the-clock .interest-number {
+  display: none;
+}
+.window .personal-off-the-clock .interest-grid h3 {
+  margin: 0 0 8px;
+  font-family: Fraunces, Georgia, serif;
+  font-size: 21px;
+  font-weight: 500;
+}
+.window .personal-app p {
+  color: #566255;
+}
+.window .personal-places {
+  background: #e5ecd9;
+  color: #263c32;
+}
+.window .personal-places .personal-content {
+  position: relative;
+}
+.window .personal-places .travel-stats {
+  padding: 0;
+  margin: 24px 0;
+  gap: 30px;
+  font-variant-numeric: tabular-nums;
+}
+.window .personal-places .travel-stats strong {
+  font-size: 24px;
+  color: #35533d;
+}
+.window .personal-places .travel-stats small {
+  color: #4e604a;
+}
+.window .personal-places .place-grid {
+  gap: 22px;
+}
+.window .personal-places .place-grid button {
+  border: 0;
+  border-radius: 0;
+  background: #faf7e9;
+  padding: 30px 20px;
+  min-height: 120px;
+  position: relative;
+  color: #456042;
+  box-shadow: 0 7px 15px #29412615;
+}
+.window .personal-places .place-grid button:first-child {
+  transform: rotate(-2deg);
+}
+.window .personal-places .place-grid button:last-child {
+  transform: rotate(2deg);
+}
+.window .personal-places .place-grid button[aria-expanded="true"] {
+  outline: 2px solid #5f7858;
+  outline-offset: 4px;
+}
+.window .personal-places .place-grid strong {
+  font:
+    500 25px Fraunces,
+    Georgia,
+    serif;
+  color: #263c32;
+}
+.window .personal-places .place-story {
+  border: 0;
+  padding: 25px 0;
+  background: none;
+  margin-top: 25px;
+}
+.window .personal-places .place-story a {
+  color: #294e36;
+}
+.window .personal-toolbox {
+  background: #192b27;
+  color: #f4f1e5;
+}
+.window .personal-toolbox .personal-toolbar {
+  background: #203731;
+  border-color: #3c514a;
+  color: #e0e5d9;
+}
+.window .personal-toolbox .personal-toolbar > span {
+  color: #e0e5d9;
+}
+.window .personal-toolbox [role="tablist"] {
+  background: #14241f;
+}
+.window .personal-toolbox [role="tab"] {
+  color: #d3decf;
+}
+.window .personal-toolbox [aria-selected="true"] {
+  background: #d5e3bc;
+  color: #20372c;
+}
+.window .personal-toolbox .personal-content h1 {
+  color: #d5e3bc;
+}
+.window .personal-toolbox p {
+  color: #d0dacd;
+}
+.window .personal-toolbox .toolbox-summary {
+  padding: 0 0 24px;
+  border: 0;
+  border-bottom: 1px solid #496057;
+  border-radius: 0;
+  background: none;
+}
+.window .personal-toolbox .toolbox-summary strong {
+  font-size: 15px;
+  color: #f4f1e5;
+}
+.window .personal-toolbox .skill-grid {
+  display: block;
+}
+.window .personal-toolbox .skill-grid article {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 12px 28px;
+  padding: 23px 0;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #496057;
+  border-radius: 0;
+}
+.window .personal-toolbox .skill-grid h2 {
+  font-size: 15px;
+  color: #f4f1e5;
+  margin: 3px 0;
+}
+.window .personal-toolbox .skill-tags span {
+  background: #2d473b;
+  color: #e3ebd1;
+  border-radius: 3px;
+  font-size: 12px;
+}
+.window .personal-toolbox .skill-grid p {
+  grid-column: 2;
+  margin: 0;
+}
+.window .personal-toolbox .toolbox-sources a {
+  color: #d5e3bc;
+}
+.window .personal-little-things {
+  background: #e9dfcc;
+  color: #4e3329;
+}
+.window .personal-little-things .little-things article > span {
+  display: none;
+}
+.window .personal-little-things .little-things h2 {
+  font:
+    500 26px Fraunces,
+    Georgia,
+    serif;
+}
+.window .personal-little-things .little-things article {
+  border-color: #c3b7a0;
+}
+.window .personal-app .hobby-list {
+  display: block;
+}
+.window .personal-app .hobby-list article {
+  border: 0;
+  border-top: 1px solid #cfc8b9;
+  border-radius: 0;
+  padding: 20px 0;
+}
+.window .personal-app .hobby-list svg {
+  color: #375a3e;
+}
+@media (min-width: 760px) {
+  .window:has(.editorial-home) {
+    width: min(940px, calc(100vw - 290px));
+  }
+  .window.maximized:has(.editorial-home) {
+    width: calc(100vw - 24px);
+  }
+  .window.tile-left:has(.editorial-home),
+  .window.tile-right:has(.editorial-home) {
+    width: calc(50vw - 20px);
+  }
+  .window.tile-left .home-cover,
+  .window.tile-right .home-cover {
+    grid-template-columns: 1fr;
+  }
+  .window.tile-left .home-photo,
+  .window.tile-right .home-photo {
+    display: none;
+  }
+}
+@media (max-width: 1050px) and (min-width: 760px) {
+  .editorial-home {
+    padding: 0 24px;
+  }
+  .home-cover {
+    gap: 20px;
+    grid-template-columns: 1.5fr 1fr;
+  }
+  .home-story h1 {
+    font-size: 38px;
+  }
+  .home-description {
+    font-size: 12px;
+  }
+  .home-chapters nav {
+    gap: 14px;
+  }
+  .home-chapters button {
+    font-size: 11px;
+    gap: 7px;
+  }
+  .shelf-apps {
+    grid-template-columns: 1fr;
+  }
+  .shelf-app {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+  }
+  .shelf-preview img {
+    height: 100%;
+    min-height: 150px;
+  }
+  .shelf-copy p {
+    min-height: 0;
+  }
+}
+@media (max-width: 759px) {
+  .entry-editorial {
+    left: 28px;
+    top: 11%;
+    max-width: calc(100% - 56px);
+  }
+  .entry-editorial h2 {
+    font-size: clamp(44px, 12vw, 62px);
+  }
+  .entry-editorial p {
+    font-size: 13px;
+    margin-top: 18px;
+  }
+  .entry-editorial > span {
+    display: none;
+  }
+  .lock-clock {
+    right: 24px;
+    top: 25px;
+  }
+  .lock-clock p {
+    font-size: 10px;
+    display: none;
+  }
+  .lock-clock time {
+    font-size: 23px;
+  }
+  .lock-status {
+    left: 24px;
+    right: auto;
+    top: 24px;
+  }
+  .lock-profile {
+    top: auto;
+    bottom: 100px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: calc(100% - 48px);
+  }
+  .lock-avatar {
+    width: 72px;
+    height: 72px;
+  }
+  .lock-profile h1 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .lock-profile > p {
+    display: none;
+  }
+  .lock-profile .login-button {
+    margin-top: 15px;
+    height: 49px;
+  }
+  .lock-profile small {
+    margin-top: 12px;
+    font-size: 10px;
+  }
+  .lock-actions {
+    bottom: 20px;
+  }
+  .editorial-home {
+    padding: 0 22px;
+  }
+  .home-masthead {
+    padding: 15px 0;
+  }
+  .home-masthead > span:nth-child(2) {
+    display: none;
+  }
+  .home-cover {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 26px;
+    padding: 28px 0 25px;
+  }
+  .home-story h1 {
+    font-size: clamp(36px, 10vw, 48px);
+  }
+  .home-greeting {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  .home-description {
+    font-size: 13px;
+    margin-top: 20px;
+  }
+  .home-cta {
+    font-size: 12px;
+    margin-top: 12px;
+  }
+  .home-photo {
+    max-width: 100%;
+    width: 100%;
+    transform: none;
+    display: grid;
+    grid-template-columns: 1fr 32px;
+    gap: 8px;
+  }
+  .home-photo img {
+    height: auto;
+    max-height: 350px;
+    object-fit: contain;
+    width: 100%;
+  }
+  .home-photo figcaption {
+    writing-mode: vertical-rl;
+    margin: 0;
+    text-align: center;
+    font-size: 19px;
+  }
+  .home-chapters nav {
+    gap: 0;
+    justify-content: space-between;
+  }
+  .home-chapters button {
+    gap: 5px;
+    font-size: 10px;
+  }
+  .home-chapters button svg {
+    width: 14px;
+  }
+  .home-chapters p {
+    line-height: 1.6;
+  }
+  .app-shelf {
+    padding: 24px 18px;
+  }
+  .shelf-heading h1 {
+    font-size: 29px;
+  }
+  .shelf-apps {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 13px;
+    padding-bottom: 10px;
+  }
+  .shelf-app {
+    min-width: 245px;
+    scroll-snap-align: start;
+  }
+  .shelf-preview img {
+    height: 150px;
+  }
+  .shelf-copy {
+    padding: 17px;
+  }
+  .shelf-copy h2 {
+    font-size: 22px;
+  }
+  .shelf-copy p {
+    font-size: 12px;
+  }
+  .shelf-copy a {
+    font-size: 12px;
+  }
+  .shelf-copy small {
+    font-size: 11px;
+  }
+  .shelf-copy > div {
+    padding-top: 14px;
+  }
+  .shelf-copy button {
+    padding: 10px;
+    margin: -10px;
+  }
+  .window .personal-app .personal-content h1 {
+    font-size: 36px;
+  }
+  .window .personal-off-the-clock .interest-grid {
+    flex-wrap: wrap;
+  }
+  .window .personal-off-the-clock .interest-grid article {
+    flex: 0 0 50%;
+    padding: 18px 10px 18px 0;
+  }
+  .window .personal-toolbox .skill-grid article {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .window .personal-toolbox .skill-grid p {
+    grid-column: auto;
+  }
+  .window .personal-places .place-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .window .personal-places .place-grid button {
+    min-height: 115px;
+  }
+  .window .personal-app .personal-content {
+    padding: 28px 25px 35px;
+  }
+}
+@media (max-height: 650px) and (max-width: 759px) {
+  .entry-editorial {
+    top: 13%;
+  }
+  .entry-editorial h2 {
+    font-size: 37px;
+  }
+  .entry-editorial p {
+    display: none;
+  }
+  .lock-profile {
+    bottom: 82px;
+  }
+  .lock-avatar {
+    width: 58px;
+    height: 58px;
+  }
+  .lock-profile small {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .entry-editorial,
+  .home-story {
+    animation: none;
+  }
+  .shelf-preview img {
+    transition: none;
+  }
+}
+.reduced-motion .entry-editorial,
+.reduced-motion .home-story {
+  animation: none;
+}
+.window .personal-places .place-entry {
+  min-width: 0;
+}
+.window .personal-places .place-grid .place-entry button {
+  width: 100%;
+  transform: none;
+}
+.window .personal-places .place-entry:nth-child(odd) {
+  transform: rotate(-1deg);
+}
+.window .personal-places .place-entry:nth-child(even) {
+  transform: rotate(1deg);
+}
+.window .personal-places .inline-place-story {
+  background: #faf7e9;
+  padding: 0 20px 22px;
+}
+.window .personal-places .inline-place-story p {
+  color: #425640;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.window .personal-places .inline-place-story a {
+  color: #294e36;
+  font-size: 11px;
+  display: inline-block;
+  margin-top: 10px;
+}
+.home-chapters button {
+  min-height: 44px;
+}
+.window .personal-app .personal-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}

@@ -3,74 +3,10 @@ import { Icon } from "./Icon";
 import { profile, projects, notes, sources } from "./data";
 import { QuickLook } from "./DesktopTools";
 import { asset } from "./assets";
+import EditorialHome from "./EditorialHome";
+import AppShelf, { developedApps } from "./AppShelf";
 export function About({ open }) {
-  return (
-    <div className="about-body">
-      <div className="about-intro">
-        <div>
-          <h1>Hi, I’m {profile.firstName}.</h1>
-          <h2>
-            I build things that make the internet feel a little more useful.
-          </h2>
-          <p className="bio">{profile.bio}</p>
-        </div>
-        <figure className="portrait">
-          <div className="tape" />
-          <img
-            className="about-photo"
-            src={asset("photos/ethan-still-building.webp")}
-            alt="Ethan Barman outdoors, with the words Still Building — work in progress"
-            width="720"
-            height="900"
-            decoding="async"
-            loading="lazy"
-          />
-          <figcaption>Always a work in progress.</figcaption>
-        </figure>
-      </div>
-      <div className="highlights">
-        {[
-          [
-            "Compass",
-            "Hospitality, rethought",
-            "Property-first experiences. Technology that supports people and memorable stays.",
-            "lavender",
-          ],
-          [
-            "Lightbulb",
-            "Build with curiosity",
-            "Turning operational problems into useful products with AI and hands-on learning.",
-            "sky",
-          ],
-          [
-            "ChartNoAxesColumnIncreasing",
-            "Make it matter",
-            "Building at the intersection of travel, technology, and human connection.",
-            "mint",
-          ],
-        ].map(([icon, title, description, color]) => (
-          <div className="highlight" key={title}>
-            <span className={`highlight-icon ${color}`}>
-              <Icon name={icon} size={23} />
-            </span>
-            <div>
-              <h3>{title}</h3>
-              <p>{description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="actions">
-        <button className="button primary" onClick={() => open("work")}>
-          Explore my work <Icon name="ArrowRight" size={18} />
-        </button>
-        <button className="button" onClick={() => open("contact")}>
-          Let’s talk
-        </button>
-        <button className="button" onClick={() => open("life")}>Life & skills <Icon name="ArrowRight" size={16} /></button>
-      </div>
-    </div>
-  );
+  return <EditorialHome open={open} />;
 }
 function ProductArt({ project }) {
   if (project.image)
@@ -203,6 +139,7 @@ export function Work({ open, mobile }) {
               />
             </label>
           </div>
+          {filter === "All projects" && !query && <AppShelf open={open} />}
           <div
             className={`project-list ${view === "list" ? "finder-list-view" : ""}`}
           >
@@ -304,6 +241,7 @@ export function Project({ id, open }) {
           ))}
         </ul>
         <div className="actions">
+          {developedApps.find(app => app.project === id)?.play && <a className="button play-store-link" href={developedApps.find(app => app.project === id).play} target="_blank" rel="noopener noreferrer">Get it on Google Play <Icon name="ArrowUpRight" size={16} /></a>}
           <a
             className="button primary"
             href={p.url}

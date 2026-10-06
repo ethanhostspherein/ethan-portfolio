@@ -34,6 +34,9 @@ import {
   Moon,
   RotateCcw,
   SlidersHorizontal,
+  Code,
+  Gamepad2,
+  Smartphone,
 } from "lucide-react";
 const Icons = {
   Sparkles,
@@ -68,6 +71,9 @@ const Icons = {
   Moon,
   RotateCcw,
   SlidersHorizontal,
+  Code,
+  Gamepad2,
+  Smartphone,
 };
 export function Icon({ name, size = 20, ...props }) {
   const Component = Icons[name] || Icons.Sparkles;

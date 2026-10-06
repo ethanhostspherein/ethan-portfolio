@@ -1,0 +1,587 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-06T08:23:42.539Z",
+  "title": "Design System: Ethan Barman — Personal Editorial Journal",
+  "extensions": {
+    "colorMeta": {
+      "journal-paper": {
+        "role": "neutral",
+        "displayName": "Journal Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0140 88.68)",
+          "oklch(26% 0.0140 88.68)",
+          "oklch(38% 0.0140 88.68)",
+          "oklch(49% 0.0140 88.68)",
+          "oklch(61% 0.0140 88.68)",
+          "oklch(72% 0.0140 88.68)",
+          "oklch(84% 0.0140 88.68)",
+          "oklch(95% 0.0140 88.68)"
+        ]
+      },
+      "journal-ink": {
+        "role": "primary",
+        "displayName": "Journal Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0333 171.20)",
+          "oklch(26% 0.0333 171.20)",
+          "oklch(38% 0.0333 171.20)",
+          "oklch(49% 0.0333 171.20)",
+          "oklch(61% 0.0333 171.20)",
+          "oklch(72% 0.0333 171.20)",
+          "oklch(84% 0.0333 171.20)",
+          "oklch(95% 0.0333 171.20)"
+        ]
+      },
+      "journal-red": {
+        "role": "primary",
+        "displayName": "Journal Red",
+        "tonalRamp": [
+          "oklch(15% 0.1472 29.81)",
+          "oklch(26% 0.1472 29.81)",
+          "oklch(38% 0.1472 29.81)",
+          "oklch(49% 0.1472 29.81)",
+          "oklch(61% 0.1472 29.81)",
+          "oklch(72% 0.1472 29.81)",
+          "oklch(84% 0.1472 29.81)",
+          "oklch(95% 0.1472 29.81)"
+        ]
+      },
+      "journal-rule": {
+        "role": "neutral",
+        "displayName": "Journal Rule",
+        "tonalRamp": [
+          "oklch(15% 0.0156 90.25)",
+          "oklch(26% 0.0156 90.25)",
+          "oklch(38% 0.0156 90.25)",
+          "oklch(49% 0.0156 90.25)",
+          "oklch(61% 0.0156 90.25)",
+          "oklch(72% 0.0156 90.25)",
+          "oklch(84% 0.0156 90.25)",
+          "oklch(95% 0.0156 90.25)"
+        ]
+      },
+      "story-muted": {
+        "role": "neutral",
+        "displayName": "Story Muted",
+        "tonalRamp": [
+          "oklch(15% 0.0289 161.88)",
+          "oklch(26% 0.0289 161.88)",
+          "oklch(38% 0.0289 161.88)",
+          "oklch(49% 0.0289 161.88)",
+          "oklch(61% 0.0289 161.88)",
+          "oklch(72% 0.0289 161.88)",
+          "oklch(84% 0.0289 161.88)",
+          "oklch(95% 0.0289 161.88)"
+        ]
+      },
+      "label-muted": {
+        "role": "neutral",
+        "displayName": "Label Muted",
+        "tonalRamp": [
+          "oklch(15% 0.0215 155.29)",
+          "oklch(26% 0.0215 155.29)",
+          "oklch(38% 0.0215 155.29)",
+          "oklch(49% 0.0215 155.29)",
+          "oklch(61% 0.0215 155.29)",
+          "oklch(72% 0.0215 155.29)",
+          "oklch(84% 0.0215 155.29)",
+          "oklch(95% 0.0215 155.29)"
+        ]
+      },
+      "explorer-green": {
+        "role": "secondary",
+        "displayName": "Explorer Green",
+        "tonalRamp": [
+          "oklch(15% 0.0619 156.27)",
+          "oklch(26% 0.0619 156.27)",
+          "oklch(38% 0.0619 156.27)",
+          "oklch(49% 0.0619 156.27)",
+          "oklch(61% 0.0619 156.27)",
+          "oklch(72% 0.0619 156.27)",
+          "oklch(84% 0.0619 156.27)",
+          "oklch(95% 0.0619 156.27)"
+        ]
+      },
+      "playful-violet": {
+        "role": "tertiary",
+        "displayName": "Playful Violet",
+        "tonalRamp": [
+          "oklch(15% 0.1097 298.83)",
+          "oklch(26% 0.1097 298.83)",
+          "oklch(38% 0.1097 298.83)",
+          "oklch(49% 0.1097 298.83)",
+          "oklch(61% 0.1097 298.83)",
+          "oklch(72% 0.1097 298.83)",
+          "oklch(84% 0.1097 298.83)",
+          "oklch(95% 0.1097 298.83)"
+        ]
+      },
+      "shelf-evergreen": {
+        "role": "secondary",
+        "displayName": "Shelf Evergreen",
+        "tonalRamp": [
+          "oklch(15% 0.0359 167.10)",
+          "oklch(26% 0.0359 167.10)",
+          "oklch(38% 0.0359 167.10)",
+          "oklch(49% 0.0359 167.10)",
+          "oklch(61% 0.0359 167.10)",
+          "oklch(72% 0.0359 167.10)",
+          "oklch(84% 0.0359 167.10)",
+          "oklch(95% 0.0359 167.10)"
+        ]
+      },
+      "shelf-cream": {
+        "role": "neutral",
+        "displayName": "Shelf Cream",
+        "tonalRamp": [
+          "oklch(15% 0.0168 88.00)",
+          "oklch(26% 0.0168 88.00)",
+          "oklch(38% 0.0168 88.00)",
+          "oklch(49% 0.0168 88.00)",
+          "oklch(61% 0.0168 88.00)",
+          "oklch(72% 0.0168 88.00)",
+          "oklch(84% 0.0168 88.00)",
+          "oklch(95% 0.0168 88.00)"
+        ]
+      },
+      "shelf-muted": {
+        "role": "neutral",
+        "displayName": "Shelf Muted",
+        "tonalRamp": [
+          "oklch(15% 0.0212 140.89)",
+          "oklch(26% 0.0212 140.89)",
+          "oklch(38% 0.0212 140.89)",
+          "oklch(49% 0.0212 140.89)",
+          "oklch(61% 0.0212 140.89)",
+          "oklch(72% 0.0212 140.89)",
+          "oklch(84% 0.0212 140.89)",
+          "oklch(95% 0.0212 140.89)"
+        ]
+      },
+      "travel-sage": {
+        "role": "secondary",
+        "displayName": "Travel Sage",
+        "tonalRamp": [
+          "oklch(15% 0.0263 123.44)",
+          "oklch(26% 0.0263 123.44)",
+          "oklch(38% 0.0263 123.44)",
+          "oklch(49% 0.0263 123.44)",
+          "oklch(61% 0.0263 123.44)",
+          "oklch(72% 0.0263 123.44)",
+          "oklch(84% 0.0263 123.44)",
+          "oklch(95% 0.0263 123.44)"
+        ]
+      },
+      "postcard-paper": {
+        "role": "neutral",
+        "displayName": "Postcard Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0187 96.86)",
+          "oklch(26% 0.0187 96.86)",
+          "oklch(38% 0.0187 96.86)",
+          "oklch(49% 0.0187 96.86)",
+          "oklch(61% 0.0187 96.86)",
+          "oklch(72% 0.0187 96.86)",
+          "oklch(84% 0.0187 96.86)",
+          "oklch(95% 0.0187 96.86)"
+        ]
+      },
+      "travel-ink": {
+        "role": "neutral",
+        "displayName": "Travel Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0331 164.45)",
+          "oklch(26% 0.0331 164.45)",
+          "oklch(38% 0.0331 164.45)",
+          "oklch(49% 0.0331 164.45)",
+          "oklch(61% 0.0331 164.45)",
+          "oklch(72% 0.0331 164.45)",
+          "oklch(84% 0.0331 164.45)",
+          "oklch(95% 0.0331 164.45)"
+        ]
+      },
+      "travel-selected": {
+        "role": "neutral",
+        "displayName": "Travel Selected",
+        "tonalRamp": [
+          "oklch(15% 0.0567 138.90)",
+          "oklch(26% 0.0567 138.90)",
+          "oklch(38% 0.0567 138.90)",
+          "oklch(49% 0.0567 138.90)",
+          "oklch(61% 0.0567 138.90)",
+          "oklch(72% 0.0567 138.90)",
+          "oklch(84% 0.0567 138.90)",
+          "oklch(95% 0.0567 138.90)"
+        ]
+      },
+      "toolbox-evergreen": {
+        "role": "secondary",
+        "displayName": "Toolbox Evergreen",
+        "tonalRamp": [
+          "oklch(15% 0.0250 178.78)",
+          "oklch(26% 0.0250 178.78)",
+          "oklch(38% 0.0250 178.78)",
+          "oklch(49% 0.0250 178.78)",
+          "oklch(61% 0.0250 178.78)",
+          "oklch(72% 0.0250 178.78)",
+          "oklch(84% 0.0250 178.78)",
+          "oklch(95% 0.0250 178.78)"
+        ]
+      },
+      "toolbox-toolbar": {
+        "role": "neutral",
+        "displayName": "Toolbox Toolbar",
+        "tonalRamp": [
+          "oklch(15% 0.0311 175.88)",
+          "oklch(26% 0.0311 175.88)",
+          "oklch(38% 0.0311 175.88)",
+          "oklch(49% 0.0311 175.88)",
+          "oklch(61% 0.0311 175.88)",
+          "oklch(72% 0.0311 175.88)",
+          "oklch(84% 0.0311 175.88)",
+          "oklch(95% 0.0311 175.88)"
+        ]
+      },
+      "toolbox-tabbar": {
+        "role": "neutral",
+        "displayName": "Toolbox Tabbar",
+        "tonalRamp": [
+          "oklch(15% 0.0238 172.58)",
+          "oklch(26% 0.0238 172.58)",
+          "oklch(38% 0.0238 172.58)",
+          "oklch(49% 0.0238 172.58)",
+          "oklch(61% 0.0238 172.58)",
+          "oklch(72% 0.0238 172.58)",
+          "oklch(84% 0.0238 172.58)",
+          "oklch(95% 0.0238 172.58)"
+        ]
+      },
+      "toolbox-selected": {
+        "role": "neutral",
+        "displayName": "Toolbox Selected",
+        "tonalRamp": [
+          "oklch(15% 0.0540 123.55)",
+          "oklch(26% 0.0540 123.55)",
+          "oklch(38% 0.0540 123.55)",
+          "oklch(49% 0.0540 123.55)",
+          "oklch(61% 0.0540 123.55)",
+          "oklch(72% 0.0540 123.55)",
+          "oklch(84% 0.0540 123.55)",
+          "oklch(95% 0.0540 123.55)"
+        ]
+      },
+      "toolbox-paper": {
+        "role": "neutral",
+        "displayName": "Toolbox Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0162 95.23)",
+          "oklch(26% 0.0162 95.23)",
+          "oklch(38% 0.0162 95.23)",
+          "oklch(49% 0.0162 95.23)",
+          "oklch(61% 0.0162 95.23)",
+          "oklch(72% 0.0162 95.23)",
+          "oklch(84% 0.0162 95.23)",
+          "oklch(95% 0.0162 95.23)"
+        ]
+      },
+      "toolbox-muted": {
+        "role": "neutral",
+        "displayName": "Toolbox Muted",
+        "tonalRamp": [
+          "oklch(15% 0.0206 138.44)",
+          "oklch(26% 0.0206 138.44)",
+          "oklch(38% 0.0206 138.44)",
+          "oklch(49% 0.0206 138.44)",
+          "oklch(61% 0.0206 138.44)",
+          "oklch(72% 0.0206 138.44)",
+          "oklch(84% 0.0206 138.44)",
+          "oklch(95% 0.0206 138.44)"
+        ]
+      },
+      "toolbox-rule": {
+        "role": "neutral",
+        "displayName": "Toolbox Rule",
+        "tonalRamp": [
+          "oklch(15% 0.0313 169.03)",
+          "oklch(26% 0.0313 169.03)",
+          "oklch(38% 0.0313 169.03)",
+          "oklch(49% 0.0313 169.03)",
+          "oklch(61% 0.0313 169.03)",
+          "oklch(72% 0.0313 169.03)",
+          "oklch(84% 0.0313 169.03)",
+          "oklch(95% 0.0313 169.03)"
+        ]
+      },
+      "toolbox-tag": {
+        "role": "neutral",
+        "displayName": "Toolbox Tag",
+        "tonalRamp": [
+          "oklch(15% 0.0381 163.97)",
+          "oklch(26% 0.0381 163.97)",
+          "oklch(38% 0.0381 163.97)",
+          "oklch(49% 0.0381 163.97)",
+          "oklch(61% 0.0381 163.97)",
+          "oklch(72% 0.0381 163.97)",
+          "oklch(84% 0.0381 163.97)",
+          "oklch(95% 0.0381 163.97)"
+        ]
+      },
+      "toolbox-tag-text": {
+        "role": "neutral",
+        "displayName": "Toolbox Tag Text",
+        "tonalRamp": [
+          "oklch(15% 0.0355 121.02)",
+          "oklch(26% 0.0355 121.02)",
+          "oklch(38% 0.0355 121.02)",
+          "oklch(49% 0.0355 121.02)",
+          "oklch(61% 0.0355 121.02)",
+          "oklch(72% 0.0355 121.02)",
+          "oklch(84% 0.0355 121.02)",
+          "oklch(95% 0.0355 121.02)"
+        ]
+      },
+      "entry-cream": {
+        "role": "neutral",
+        "displayName": "Entry Cream",
+        "tonalRamp": [
+          "oklch(15% 0.0220 89.79)",
+          "oklch(26% 0.0220 89.79)",
+          "oklch(38% 0.0220 89.79)",
+          "oklch(49% 0.0220 89.79)",
+          "oklch(61% 0.0220 89.79)",
+          "oklch(72% 0.0220 89.79)",
+          "oklch(84% 0.0220 89.79)",
+          "oklch(95% 0.0220 89.79)"
+        ]
+      },
+      "entry-sage": {
+        "role": "secondary",
+        "displayName": "Entry Sage",
+        "tonalRamp": [
+          "oklch(15% 0.0554 123.22)",
+          "oklch(26% 0.0554 123.22)",
+          "oklch(38% 0.0554 123.22)",
+          "oklch(49% 0.0554 123.22)",
+          "oklch(61% 0.0554 123.22)",
+          "oklch(72% 0.0554 123.22)",
+          "oklch(84% 0.0554 123.22)",
+          "oklch(95% 0.0554 123.22)"
+        ]
+      },
+      "entry-muted": {
+        "role": "neutral",
+        "displayName": "Entry Muted",
+        "tonalRamp": [
+          "oklch(15% 0.0109 274.89)",
+          "oklch(26% 0.0109 274.89)",
+          "oklch(38% 0.0109 274.89)",
+          "oklch(49% 0.0109 274.89)",
+          "oklch(61% 0.0109 274.89)",
+          "oklch(72% 0.0109 274.89)",
+          "oklch(84% 0.0109 274.89)",
+          "oklch(95% 0.0109 274.89)"
+        ]
+      },
+      "focus-ring": {
+        "role": "tertiary",
+        "displayName": "Focus Ring",
+        "tonalRamp": [
+          "oklch(15% 0.1618 290.82)",
+          "oklch(26% 0.1618 290.82)",
+          "oklch(38% 0.1618 290.82)",
+          "oklch(49% 0.1618 290.82)",
+          "oklch(61% 0.1618 290.82)",
+          "oklch(72% 0.1618 290.82)",
+          "oklch(84% 0.1618 290.82)",
+          "oklch(95% 0.1618 290.82)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Cinematic entry",
+        "purpose": "Large login introduction."
+      },
+      "headline": {
+        "displayName": "Journal cover",
+        "purpose": "Switchable About story headline."
+      },
+      "shelf-title": {
+        "displayName": "App shelf title",
+        "purpose": "Apps developed by Ethan."
+      },
+      "personal-title": {
+        "displayName": "Personal window title",
+        "purpose": "Life and technical chapter headings."
+      },
+      "body": {
+        "displayName": "Journal copy",
+        "purpose": "Personal prose and product descriptions."
+      },
+      "action": {
+        "displayName": "Journal action",
+        "purpose": "Direction buttons beneath story copy."
+      },
+      "caption": {
+        "displayName": "Handwritten annotation",
+        "purpose": "Supplied portrait caption."
+      }
+    },
+    "shadows": [
+      {
+        "name": "desktop-window",
+        "value": "0 30px 70px #03042065, 0 4px 15px #03032140",
+        "purpose": "Preserved desktop window depth."
+      },
+      {
+        "name": "desktop-window-active",
+        "value": "0 32px 85px #02032080, 0 5px 17px #03032150",
+        "purpose": "Active desktop window."
+      },
+      {
+        "name": "postcard",
+        "value": "0 7px 15px #29412615",
+        "purpose": "Ambient travel card lift."
+      }
+    ],
+    "motion": [
+      {
+        "name": "entry-focus",
+        "value": "850ms cubic-bezier(.16,1,.3,1)",
+        "purpose": "Entry blur and clip reveal; disabled for reduced motion."
+      },
+      {
+        "name": "chapter-focus",
+        "value": "350ms cubic-bezier(.16,1,.3,1)",
+        "purpose": "Chapter opacity and blur reveal; disabled for reduced motion."
+      },
+      {
+        "name": "preview-hover",
+        "value": "transform .35s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Preview scales to 1.05; disabled by reduced-motion media query."
+      },
+      {
+        "name": "chapter-color",
+        "value": "color .2s",
+        "purpose": "Chapter navigation color changes."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile-max",
+        "value": "759px"
+      },
+      {
+        "name": "desktop-min",
+        "value": "760px"
+      },
+      {
+        "name": "compact-desktop-max",
+        "value": "1050px"
+      },
+      {
+        "name": "short-mobile-height-max",
+        "value": "650px"
+      }
+    ],
+    "focus": {
+      "value": "3px solid #9780f0",
+      "outlineOffset": "4px",
+      "purpose": "Inherited buttons, links and form fields."
+    },
+    "palettePreview": {
+      "note": "Tonal ramps are synthesized preview metadata in OKLCH, not additional implementation tokens; primitives remain normative in DESIGN.md."
+    },
+    "sourceFiles": [
+      "src/creative.css",
+      "src/styles.css",
+      "src/personal.css",
+      "src/EditorialHome.jsx",
+      "src/AppShelf.jsx",
+      "src/TravelJournal.jsx"
+    ]
+  },
+  "components": [
+    {
+      "name": "Journal action",
+      "kind": "button",
+      "refersTo": "journal-action",
+      "description": "Chapter-colored text action with a bottom rule.",
+      "html": "<button class=\"ds-journal-action\">Explore what I’ve built</button>",
+      "css": ".ds-journal-action{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:13px 0;margin-top:20px;border:0;border-bottom:1px solid var(--journal-red);background:none;color:var(--journal-red);font-family:\"DM Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;font-size:13px;font-weight:600;text-align:left;cursor:pointer}.ds-journal-action:hover{color:#6e241c}.ds-journal-action:focus-visible{outline:3px solid #9780f0;outline-offset:4px}.ds-journal-action:disabled{opacity:.35;cursor:not-allowed}"
+    },
+    {
+      "name": "Chapter navigation",
+      "kind": "nav",
+      "refersTo": "chapter-tab",
+      "description": "Pressed chapter receives a top rule and matching accent.",
+      "html": "<nav class=\"ds-chapters\" aria-label=\"Explore Ethan’s story\"><button aria-pressed=\"true\">The builder</button><button aria-pressed=\"false\">The explorer</button><button aria-pressed=\"false\">The playful side</button></nav>",
+      "css": ".ds-chapters{display:flex;gap:22px;border-top:1px solid var(--journal-rule)}.ds-chapters button{display:flex;align-items:center;min-height:44px;gap:12px;padding:17px 0 13px;margin-top:-1px;border:0;border-top:2px solid transparent;background:none;font-family:\"DM Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;font-size:12px;color:#546158;transition:color .2s;cursor:pointer}.ds-chapters button[aria-pressed=true]{border-color:var(--journal-red);color:var(--journal-red);font-weight:600}.ds-chapters button:focus-visible{outline:3px solid #9780f0;outline-offset:4px}@media(max-width:759px){.ds-chapters{gap:0;justify-content:space-between}.ds-chapters button{gap:5px;font-size:10px}}"
+    },
+    {
+      "name": "App shelf copy",
+      "kind": "card",
+      "refersTo": "shelf-card",
+      "description": "Cream product evidence card; preview artwork is intentionally omitted from this isolated sample.",
+      "html": "<article class=\"ds-shelf-card\"><div class=\"ds-shelf-copy\"><small>Android + web</small><h2>JuxTravel</h2><p>Travel discovery, independent stays, and a personal travel Passport.</p><div><a href=\"https://play.google.com/store/apps/details?id=com.hostsphere.juxtravel\" target=\"_blank\" rel=\"noopener noreferrer\">Google Play</a></div></div></article>",
+      "css": ".ds-shelf-card{min-width:0;background:var(--journal-paper);color:var(--journal-ink);border-radius:10px;overflow:hidden;font-family:\"DM Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif}.ds-shelf-copy{padding:14px}.ds-shelf-copy small{font-size:9px;color:#5a655b}.ds-shelf-copy h2{font-size:17px;margin-top:5px;letter-spacing:-.02em}.ds-shelf-copy p{font-size:11px;line-height:1.6;margin:8px 0 15px;color:#49574e;min-height:53px}.ds-shelf-copy>div{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--journal-rule);padding-top:12px}.ds-shelf-copy a{font-size:11px;font-weight:600;text-decoration:none;color:var(--journal-red)}.ds-shelf-copy a:hover{text-decoration:underline}.ds-shelf-copy a:focus-visible{outline:3px solid #9780f0;outline-offset:4px}"
+    },
+    {
+      "name": "Travel postcard",
+      "kind": "button",
+      "refersTo": "postcard",
+      "description": "Square postcard button inside alternating ±1 degree entry wrappers; an expanded story appears directly below its card.",
+      "html": "<div class=\"ds-place-entry\"><button class=\"ds-postcard\" aria-expanded=\"true\" aria-controls=\"ds-shimla-story\"><span><strong>Shimla</strong></span></button><div class=\"ds-inline-story\" id=\"ds-shimla-story\"><p>From Ethan’s travel journal.</p></div></div>",
+      "css": " .ds-place-entry{min-width:0;transform:rotate(-1deg)}.ds-postcard{width:100%;display:flex;gap:14px;align-items:center;text-align:left;border:0;border-radius:0;background:#faf7e9;padding:30px 20px;min-height:120px;color:#456042;box-shadow:0 7px 15px #29412615;cursor:pointer}.ds-postcard>span{flex:1}.ds-postcard strong{display:block;font:500 25px Fraunces,Georgia,serif;color:#263c32}.ds-postcard[aria-expanded=true]{outline:2px solid #5f7858;outline-offset:4px}.ds-postcard:focus-visible{outline:3px solid #9780f0;outline-offset:4px}.ds-inline-story{background:#faf7e9;padding:0 20px 22px;font-family:\"DM Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif}.ds-inline-story p{color:#425640;font-size:12px;line-height:1.7}"
+    },
+    {
+      "name": "Technical tags",
+      "kind": "chip",
+      "refersTo": "toolbox-tag",
+      "description": "Compact informational tags on a dark technical surface.",
+      "html": "<div class=\"ds-toolbox-tags\"><span>React</span><span>Android</span></div>",
+      "css": ".ds-toolbox-tags{display:flex;flex-wrap:wrap;gap:6px;padding:12px;background:#192b27;font-family:\"DM Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif}.ds-toolbox-tags span{background:#2d473b;color:#e3ebd1;border-radius:3px;font-size:12px;padding:5px 9px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Personal Editorial Journal",
+    "overview": "The portfolio feels like an open journal on Ethan's MacBook. Warm paper, a restrained coral accent, serif storytelling and handwritten photograph captions make the content personal. The preserved desktop chrome, artwork and controls give visitors a familiar way to explore.\n\nMaterials change with the subject: the About cover uses cream paper, the app shelf uses evergreen, travel uses pale green postcards, and the technical toolbox uses a deeper evergreen workspace. A cinematic login introduces the same curiosity through large type over the existing background artwork. These materials express one personal world while allowing its chapters to feel distinct.",
+    "keyCharacteristics": [
+      "Editorial serif headlines paired with practical sans-serif navigation.",
+      "Cream paper, coral actions and evergreen working surfaces.",
+      "Supplied photography and existing identity artwork as visual anchors.",
+      "Thin rules, restrained card depth and functional desktop chrome.",
+      "Responsive compositions that retain the story and keyboard access."
+    ],
+    "rules": [
+      {
+        "name": "The Chapter Color Rule",
+        "body": "A chapter's headline, action and selected marker share its accent. Change them together when switching chapters.",
+        "section": "colors"
+      },
+      {
+        "name": "The Story and Control Rule",
+        "body": "Use serif type for storytelling and sans-serif type for controls, product metadata and technical tags.",
+        "section": "typography"
+      },
+      {
+        "name": "The Material Depth Rule",
+        "body": "Retain window depth for the desktop frame; use rules and background materials to organize the journal.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do preserve the Apple logo, existing application icons, project logos, supplied photographs and background artwork.",
+      "Do retain the functioning desktop controls, accessible keyboard navigation and responsive touch interpretation.",
+      "Do pair story accents with their selected markers and destination actions.",
+      "Do use thin rules and material contrast to organize editorial content.",
+      "Do keep app-store availability and travel entries grounded in supplied or verified content."
+    ],
+    "donts": [
+      "Don't replace, recolor or invent identity assets and photographs.",
+      "Don't turn Android development into an implied Google Play release.",
+      "Don't invent product metrics or destinations to fill visual space.",
+      "Don't remove focus indicators or ignore reduced-motion behavior."
+    ]
+  }
+}

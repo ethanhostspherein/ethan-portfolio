@@ -66,6 +66,7 @@ export default function LockScreen({
         <Icon name="Wifi" size={23} />
         <Icon name="BatteryFull" size={29} />
       </div>
+      <div className="entry-editorial"><h2>Good things<br />start with<br /><em>curiosity.</em></h2><p>Work, wandering, and a few things<br />I’m still figuring out.</p><span>Ethan’s personal desktop</span></div>
       <div className="lock-clock">
         <p>
           {clock.toLocaleDateString("en-US", {

@@ -104,3 +104,12 @@ The Toolbox lists JavaScript, TypeScript, HTML, CSS, SQL, React, Next.js, Tailwi
 Games includes Memory (six pairs, move counter, locally saved best score) and Tic-tac-toe (two players or a minimax computer opponent). Game timers pause while the app is hidden or inactive; minimizing retains progress. Both apps are lazy-loaded. Mobile dock keeps Work, About, Contact, Life, Games and Applications within reach; all sections remain available through Applications. Alt + 8 opens Life and Alt + 9 opens Games.
 
 Run `npm test` for card-deck integrity and exhaustive computer-opponent checks. Deployment runs these tests before building.
+## Editorial desktop redesign
+
+Preserves all Apple and app artwork, project previews and supplied photographs. The redesigned login uses a large curiosity statement; About becomes an interactive editorial cover with Builder, Explorer and Play chapters. Work adds an app shelf, Places uses expandable postcards, and Toolbox uses an evergreen developer workspace. Display font Fraunces is self-hosted under the SIL Open Font License; Vite rebases its URL for GitHub Pages.
+
+Google Play listings verified directly on 6 October 2026 under Hostsphere India Private Limited:
+- JuxTravel: https://play.google.com/store/apps/details?id=com.hostsphere.juxtravel
+- ResIQ: https://play.google.com/store/apps/details?id=com.hostizzy.resiq
+
+HostSuite Mobile is shown as Android development, without an unverified store link. The journal now includes nine owner-supplied destinations (Amritsar, Manali, McLeod Ganj, Mukteshwar, Kashmir, Mumbai, Haridwar, Kolkata, Guwahati) and the two existing Instagram-verified entries. No dates or original-post links are invented for owner-supplied places.

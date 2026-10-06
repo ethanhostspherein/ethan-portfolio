@@ -14,6 +14,7 @@ export const personal = {
     { title: "Creative AI experiments", icon: "Sparkles", description: "Trying prompts, visual ideas, and little experiments with ChatGPT." },
   ],
   places: [
+    ...["Amritsar", "Manali", "McLeod Ganj", "Mukteshwar", "Kashmir", "Mumbai", "Haridwar", "Kolkata", "Guwahati"].map(name => ({ name, country: "India", story: "Part of my travels around India. A place in my personal journal, and a little more of the world beyond my work.", ownerSupplied: true })),
     { name: "Shimla", country: "India", year: "2025", story: "A page from the hills, shared on @staybuildtravel in November 2025. The reel says it simply: Shimla, with a little love.", source: "https://www.instagram.com/staybuildtravel/reel/DRQ8SUaE1Kf/" },
     { name: "Kainchi Dham", country: "India", year: "2026", story: "Another stop in the travel journal, shared in January 2026. The location-tagged photo keeps this little part of the journey on the record.", source: "https://www.instagram.com/staybuildtravel/p/DTQYxbBDF7R/" },
   ],
