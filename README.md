@@ -68,7 +68,7 @@ Research date: 6 October 2026.
 - [AI-assisted building post](https://www.linkedin.com/posts/ethanbarman_hospitality-ai-innovation-activity-7384800347036430336-Z6y7).
 - [Agentic platform post](https://www.linkedin.com/posts/ethanbarman_ai-agentic-emergent-activity-7391221303179079680-0wqT).
 
-Sources disagree on company founding dates, property counts, and GMV. The journey follows the current official Hostizzy timeline; conflicting financial and property-count claims are omitted. Product role descriptions summarize public founder/company information and do not assert that Ethan personally implemented every feature. The resume is a sourced profile, not a certified CV.
+Sources disagree on company founding dates, property counts, and GMV. The journey follows the current official Hostizzy timeline; conflicting financial and property-count claims are omitted. Ethan confirmed that all development in the Hostizzy GitHub organization is his work. Product roles credit him as developer on that basis; the technical toolbox also reflects technologies present in his projects and public certifications. The resume is a sourced profile, not a certified CV.
 
 ## Design
 
@@ -94,3 +94,13 @@ Command / Control + M minimizes and Command / Control + W closes a window when t
 
 Behavior reference: [Apple’s Mac keyboard shortcuts](https://support.apple.com/en-us/102650) and [Mission Control](https://support.apple.com/en-gb/guide/mac-help/mh35798/26/mac/26).
 
+
+## Life, technical toolbox, and Games
+
+Life opens a personal journal with Off the clock, Places, Toolbox, and Little things tabs. Personal interests follow Ethan's supplied portrait. Public Instagram @staybuildtravel supports travel, photography/storytelling and creative AI experiments; the Places journal links the original Shimla (November 2025) and Kainchi Dham (January 2026) posts. Only verified destinations are included. No Facebook account was identified.
+
+The Toolbox lists JavaScript, TypeScript, HTML, CSS, SQL, React, Next.js, Tailwind CSS, Firebase, Supabase, Node.js, AI-assisted development, Git, GitHub, Vercel, PWAs, quality analysis and networking foundations. Repo technologies, public LinkedIn certifications and Ethan's confirmation of development ownership support this content. No skill percentages or unsupported expertise rankings are used.
+
+Games includes Memory (six pairs, move counter, locally saved best score) and Tic-tac-toe (two players or a minimax computer opponent). Game timers pause while the app is hidden or inactive; minimizing retains progress. Both apps are lazy-loaded. Mobile dock keeps Work, About, Contact, Life, Games and Applications within reach; all sections remain available through Applications. Alt + 8 opens Life and Alt + 9 opens Games.
+
+Run `npm test` for card-deck integrity and exhaustive computer-opponent checks. Deployment runs these tests before building.

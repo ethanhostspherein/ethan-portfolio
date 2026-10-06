@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, lazy, Suspense } from "react";
 import { apps, projects, profile } from "./data";
 import { Icon, AppIcon } from "./Icon";
 import Window from "./Window";
@@ -24,6 +24,8 @@ import {
   Terminal,
   SystemInfo,
 } from "./Apps";
+const Personal = lazy(() => import("./Personal"));
+const Games = lazy(() => import("./Games"));
 const titles = {
   ...Object.fromEntries(apps.map((a) => [a.id, a.name])),
   ...Object.fromEntries(projects.map((p) => [p.id, p.name])),
@@ -32,7 +34,7 @@ const titles = {
   help: "Welcome home",
   settings: "System Settings",
 };
-const nativeAppNames = {about: "Contacts", work: "Finder", journey: "Safari", ideas: "Tips", writing: "Notes", contact: "Mail", resume: "Preview"};
+const nativeAppNames = {about: "Contacts", work: "Finder", journey: "Safari", ideas: "Tips", writing: "Notes", contact: "Mail", resume: "Preview", life: "Photos", games: "Games"};
 export default function App() {
   const [windows, setWindows] = useState([{ id: "about", z: 10, shift: 0 }]),
     [clock, setClock] = useState(new Date()),
@@ -347,6 +349,10 @@ export default function App() {
         return <Contact />;
       case "resume":
         return <Resume />;
+      case "life":
+        return <Personal open={open} />;
+      case "games":
+        return <Games active={active?.id === "games" && !locked && !panel} />;
       case "terminal":
         return <Terminal open={open} />;
       case "system":
@@ -755,11 +761,11 @@ export default function App() {
               onMaximize={maximize}
               onSwipe={swipe}
             >
-              {content(win.id)}
+              <Suspense fallback={<div className="app-loading" role="status">Opening {titles[win.id]}…</div>}>{content(win.id)}</Suspense>
             </Window>
           ))}
           <nav className="dock" aria-label="Application dock">
-            {[apps.find((app) => app.id === "work"), ...apps.filter((app) => app.id !== "work")].map((app) => (
+            {[apps.find((app) => app.id === "work"), ...apps.filter((app) => app.id !== "work" && (!mobile || ["about", "life", "games", "contact"].includes(app.id)))].map((app) => (
               <button
                 key={app.id}
                 aria-label={`Open ${app.name}`}
@@ -883,7 +889,7 @@ export default function App() {
         <div className="sr-only">
           {profile.name}, {profile.role}. Explore projects, professional
           journey, ideas, writing, contact, and resume. Use Alt with number keys
-          1 through 7 to open apps.
+          1 through 9 to open apps.
         </div>
       </div>
       {locked && (

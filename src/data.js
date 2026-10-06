@@ -5,7 +5,7 @@ export const profile = {
   role: "Co-Founder & CEO, Hostizzy",
   email: "admin@hostsphereindia.com",
   linkedin: "https://www.linkedin.com/in/ethanbarman",
-  bio: "Founder, operator, and hands-on builder. Bringing hospitality experience and thoughtful technology together to make travel feel more human.",
+  bio: "Founder, operator, and hands-on developer. I build the products behind Hostizzy, bringing hospitality experience and thoughtful technology together to make travel feel more human.",
 };
 export const sources = {
   hostizzy: "https://www.hostizzy.com/about",
@@ -24,6 +24,8 @@ export const apps = [
   { id: "writing", name: "Writing", icon: "FileText", color: "purple" },
   { id: "contact", name: "Contact", icon: "Send", color: "coral" },
   { id: "resume", name: "Resume", icon: "FileText", color: "cyan" },
+  { id: "life", name: "Life", icon: "Compass", color: "green" },
+  { id: "games", name: "Games", icon: "LayoutGrid", color: "purple" },
 ];
 export const projects = [
   {
@@ -35,7 +37,7 @@ export const projects = [
     tag: "Every property has a story.",
     description:
       "A vacation rental management company that puts each property’s individual identity first. Technology and local operations support personal guest experiences across India.",
-    role: "Co-Founder & CEO · Company vision, product strategy, technology, and client relationships",
+    role: "Co-Founder, CEO & developer · Company vision, product strategy, software development, and client relationships",
     result:
       "An operating hospitality business supported by in-house technology, property partnerships, and guest service teams.",
     features: [
@@ -56,7 +58,7 @@ export const projects = [
     tag: "Find the trip that fits.",
     description:
       "A travel platform for India’s independent homestays and villas. It helps travellers understand fit, practical trade-offs, and the real picture before booking.",
-    role: "Founder-led product strategy · Hostsphere India’s travel platform",
+    role: "Founder & developer · Product strategy and software development for Hostsphere India’s travel platform",
     result:
       "Launched across India on 15 September 2026, with an Android app and a traveller Passport for trips and memories.",
     features: [
@@ -77,7 +79,7 @@ export const projects = [
     tag: "Built for the people on the ground.",
     description:
       "Hostizzy’s reservation management product brings bookings, property information, and operating insights into a mobile-first workspace.",
-    role: "Founder-led product development · AI-assisted building",
+    role: "Founder & developer · Product design, software development, and AI-assisted building",
     result:
       "Described publicly as used for live reservations and daily operations, with multi-property management and real-time analytics.",
     features: [
@@ -98,7 +100,7 @@ export const projects = [
     tag: "The operating layer for hospitality.",
     description:
       "HostSuite, at the HostOS domain, is a property management platform for Indian vacation rentals, homestays, and boutique hotels. It brings bookings, guests, payments, and team workflows together.",
-    role: "Founder-led product vision and AI-assisted development",
+    role: "Founder & developer · Product vision, software development, and AI-assisted building",
     result:
       "A live product with dedicated guest and owner portals, OTA reservation workflows, and tools for day-to-day property operations.",
     features: [

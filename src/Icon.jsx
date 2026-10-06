@@ -78,6 +78,7 @@ export function AppIcon({ app, small = false, desktop = false }) {
     about: "contacts", work: "finder", journey: "safari", ideas: "tips",
     writing: "notes", contact: "mail", resume: "preview", terminal: "terminal",
     settings: "settings", apps: "apps",
+    life: "photos", games: "games",
   }[app.id];
   return (
     <span

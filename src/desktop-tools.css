@@ -1443,3 +1443,11 @@
   filter: brightness(0);
   opacity: .85;
 }
+@media(min-width:760px) {
+  .desktop-icons { max-height:calc(100% - 160px); overflow-y:auto; overflow-x:hidden; scrollbar-width:thin; scrollbar-color:#ffffff40 transparent; padding:3px; }
+}
+@media(max-width:759px) {
+  .dock .dock-app { min-width:clamp(40px,11vw,44px); min-height:44px; }
+  .dock { gap:2px; }
+  .dock .utility-settings { display:none; }
+}

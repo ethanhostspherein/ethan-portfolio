@@ -2331,3 +2331,4 @@ figure {
     height: 53px;
   }
 }
+.app-loading { display:grid; min-height:200px; place-items:center; color:#8a849b; font-size:13px; }

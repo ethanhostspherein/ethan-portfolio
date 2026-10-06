@@ -67,6 +67,7 @@ export function About({ open }) {
         <button className="button" onClick={() => open("contact")}>
           Let’s talk
         </button>
+        <button className="button" onClick={() => open("life")}>Life & skills <Icon name="ArrowRight" size={16} /></button>
       </div>
     </div>
   );
@@ -711,7 +712,7 @@ export function SystemInfo() {
         <dd>A lifetime of interesting things</dd>
         <dt>Shortcuts</dt>
         <dd>
-          Alt + 1–7 · Open apps
+          Alt + 1–9 · Open apps
           <br />
           Alt + T · Terminal
           <br />
