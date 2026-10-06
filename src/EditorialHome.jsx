@@ -104,7 +104,23 @@ export default function EditorialHome({ open }) {
             </button>
           ))}
         </nav>
-        <p aria-live="polite">{story.note}</p>
+        <div className="home-footer-detail">
+          <p aria-live="polite">{story.note}</p>{" "}
+          <button className="home-album-link" onClick={() => open("life")}>
+            <img
+              src={asset("travel/kashmir.webp")}
+              alt="Kashmir destination photograph"
+              width="58"
+              height="42"
+              loading="lazy"
+            />
+            <span>
+              <strong>Beyond the screen</strong>
+              <small>Open my travel photo journal</small>
+            </span>
+            <Icon name="ArrowUpRight" size={16} />
+          </button>
+        </div>
       </footer>
     </article>
   );

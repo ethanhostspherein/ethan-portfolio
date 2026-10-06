@@ -118,3 +118,11 @@ Inspected responsive layouts at 1280×720, 390×844 and 320×740. Life tabs, scr
 ## Editorial redesign — 6 October 2026
 
 Verified desktop 1280×720 and mobile 390×844: editorial cover, chapter changes, working Work CTA, original artwork, app shelf, eleven travel cards, inline expansion, dark Toolbox and touch dock. No document overflow at 390 px. Play listings verified in the browser by exact app title and publisher. npm test and npm run build pass. A production BASE_PATH build emits /ethan-portfolio/fonts/fraunces.ttf and copies that font correctly. Independent review confirmed the editorial direction and found no material issue after checking that production font evidence. No console warnings/errors in browser checks.
+
+## Destination photography and official app screens — 6 October 2026
+
+Verified desktop 1280×720 and mobile 390×844: About photo-journal link, default Places view, destination previous/next, Cities filter, eleven thumbnail entries, and visible attribution. App switching selects ResIQ and resets its screen; previous/next browse three screenshots per app. The native screenshot viewer opens, changes screens, closes by its button, and dismisses with Escape. Mobile places the actual screenshot within the first viewport. The About footer photo link fits the initial desktop window.
+
+Independent finish review returned **ship**, with no material findings across all five desktop/mobile captures and the source/asset attribution packet. All eleven destination photographs and six official Android screenshots are local compressed WebP assets. Provenance scan reports 17 rasters and zero missing origins. Destination images are explicitly illustrative, with individual linked CC licenses and modification disclosure.
+
+Final checks: npm test passes all three game-engine tests; npm run build succeeds. Browser console has no warnings/errors and no loaded destination image failures. Initial desktop document width is 1280 px. Source attribution is included in the production build.

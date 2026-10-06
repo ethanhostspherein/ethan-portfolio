@@ -1,6 +1,7 @@
 import React from "react";
 import { projects } from "./data";
 import { Icon } from "./Icon";
+import AppScreens from "./AppScreens";
 
 export const developedApps = [
   {
@@ -28,6 +29,7 @@ export const developedApps = [
 export default function AppShelf({ open }) {
   return (
     <section className="app-shelf" aria-label="Apps developed by Ethan">
+      <AppScreens />
       <div className="shelf-heading">
         <div>
           <h1>Built. Shipped. In your pocket.</h1>

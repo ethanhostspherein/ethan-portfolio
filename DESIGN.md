@@ -100,6 +100,16 @@ components:
     textColor: "{colors.travel-ink}"
     rounded: "{rounded.postcard}"
     padding: "30px 20px"
+  destination-feature:
+    backgroundColor: "{colors.shelf-evergreen}"
+    rounded: "{rounded.shelf-card}"
+  destination-contact-card:
+    backgroundColor: "{colors.postcard-paper}"
+    textColor: "{colors.journal-ink}"
+  screenshot-viewer:
+    backgroundColor: "{colors.journal-paper}"
+    textColor: "{colors.journal-ink}"
+    padding: "16px"
   toolbox-tag:
     backgroundColor: "{colors.toolbox-tag}"
     textColor: "{colors.toolbox-tag-text}"
@@ -187,25 +197,33 @@ On desktop, the About window uses `min(940px,calc(100vw - 290px))` at widths of 
 
 Between 760px and 1050px, About padding reduces to 24px, headline size becomes 38px and the cover gap becomes 20px. The three-column app shelf becomes one column of horizontal cards with a 140px preview column. Tiled About windows use a single text column and hide the portrait to fit the available space.
 
-At widths of 759px and below, About has 22px horizontal padding and a vertically stacked cover. The portrait becomes a full-width image with a caption alongside it. The app shelf becomes horizontally scrollable with mandatory horizontal scroll snapping, a 13px gap and cards at least 245px wide. Travel cards and toolbox rows become single-column layouts. Personal content uses `28px 25px 35px` padding.
+At widths of 759px and below, About has 22px horizontal padding and a vertically stacked cover. The portrait becomes a full-width image with a caption alongside it. The app shelf becomes horizontally scrollable with mandatory horizontal scroll snapping, a 13px gap and cards at least 245px wide. Toolbox rows become single-column layouts; the destination contact sheet uses two columns. Personal content uses `28px 25px 35px` padding.
+
+The photo extension keeps these materials and typefaces. The selected destination hero is 230px high on desktop and 270px on mobile, using a cropped image and a bottom gradient for readable captions. Its contact sheet uses three columns on desktop and two on mobile. Destination-filter controls have a minimum height of 40px on desktop and 44px on mobile.
+
+Official Android screenshots use a two-column showcase (`1.15fr 1fr`, 30px gap) on desktop, with a device frame capped at 190px wide. Mobile presents the heading, app selector, 170px device frame and screen controls before the store link, description and source note. The native enlarged viewer is limited to `min(600px,calc(100vw - 32px))` by `min(850px,calc(100dvh - 48px))`; screenshots fit within it without cropping.
+
+The About footer now includes a compact sage travel-journal link with a destination thumbnail; it sits beside the chapter note on desktop and below it on mobile. Desktop cover padding is `10px 0 8px` to accommodate this footer while keeping the approved portrait visible.
 
 The desktop login separates the large left-hand introduction from the right-hand clock and profile. Mobile keeps the introduction near the top and the profile near the bottom. A short-height mobile adjustment applies at 650px or below to keep the login usable.
 
 ## Elevation & Depth
 
-Depth is a hybrid: retained desktop-window shadows establish the operating-system frame, while editorial content is mostly flat and divided with rules. Postcards receive a small ambient lift; the supplied About portrait is tilted slightly without an added card shadow. Product cards rely on material contrast against evergreen.
+Depth is a hybrid: retained desktop-window shadows establish the operating-system frame, while editorial content is mostly flat and divided with rules. The destination contact sheet receives a small lift on hover; the supplied About portrait is tilted slightly without an added card shadow. Product cards rely on material contrast against evergreen.
 
 ### Shadow Vocabulary
 
 - **Desktop window:** `0 30px 70px #03042065, 0 4px 15px #03032140`.
 - **Active desktop window:** `0 32px 85px #02032080, 0 5px 17px #03032150`.
-- **Travel postcard:** `0 7px 15px #29412615`.
+- **Destination contact-card hover:** `0 5px 15px #193b2228`.
+- **Android device frame:** `0 14px 25px #06110950`.
+- **Enlarged screenshot viewer:** `0 20px 70px #0008`, with a `#06150ed9` backdrop and 7px backdrop blur.
 
 **The Material Depth Rule.** Retain window depth for the desktop frame; use rules and background materials to organize the journal.
 
 ## Shapes
 
-The preserved desktop window uses the desktop-window radius token. App cards use the shelf-card radius token and clip their previews. Portrait corners use the photograph token; technical tags use the tag token. Travel postcards and toolbox rows use square corners. Travel entry wrappers alternate minus and plus one degree of rotation; their buttons remain upright within the wrapper. The About portrait rotates by two degrees on desktop and returns upright on mobile.
+The preserved desktop window uses the desktop-window radius token. App cards use the shelf-card radius token and clip their previews. Portrait corners use the photograph token; technical tags use the tag token. Toolbox rows remain square. The photo gallery replaces the earlier rotated travel entries with an upright contact sheet: cards have 7px corners, the selected hero uses 10px corners and filter controls use 6px corners. Android device frames use 20px corners; the native screenshot viewer uses 13px corners. The About portrait rotates by two degrees on desktop and returns upright on mobile.
 
 ## Components
 
@@ -227,9 +245,21 @@ App cards pair existing product previews with platform labels, names, descriptio
 
 The shelf currently shows verified Google Play destinations for JuxTravel and ResIQ. HostSuite Mobile is labelled Android development and links to HostOS. These distinctions are content truth, so the visual treatment must not imply a third store release.
 
-### Travel Postcards
+### Destination Photo Journal
 
-The travel surface uses pale green behind square paper cards. Selected cards retain an expanded-state outline (`2px` with `4px` offset); each expanded story appears immediately under its clicked card, inside the same paper entry with padding of \`0 20px 22px\`. A single selected entry controls the inline expansion, with \`aria-controls\` connecting its button to the story. The eleven destinations come from user-provided or verified content. Reuse supplied photos where available.
+The pale-green journal retains its editorial voice while replacing text postcards with an eleven-destination photo gallery. Hills, Cities, Heritage and All places filters use `aria-pressed`. A selected photograph fills the hero, with region, destination name and circular previous/next controls over the bottom gradient. The selected contact-sheet card has a two-pixel outline with three-pixel offset; choosing it scrolls the hero into view. Reduced-motion preferences use immediate scrolling.
+
+Photographs are licensed Wikimedia Commons destination illustrations, distinct from Ethan's supplied personal portraits. Show the photographer, original source, license and resizing/cropping notice beneath the selected image, plus the expandable complete credits list. Preserve original-post links where supplied; Personal opens directly to Places.
+
+### Official Android Screenshots
+
+The evergreen shelf includes three official Android screenshots each for JuxTravel and ResIQ. App selection resets the screenshot index; labelled previous/next controls cycle through the three screens and announce the current index. The framed screenshot is an enlarge button that opens a native modal dialog. Close, Previous, Next and Google Play remain available in the enlarged viewer; the modal contains the full screenshot with `object-fit:contain`.
+
+Keep screenshots as published product evidence, with the source note and verified Play Store destination. HostSuite Mobile retains its Android-development status in the existing app shelf.
+
+### About Travel Link
+
+A small sage thumbnail link in the chapter footer opens the travel photo journal. Its desktop thumbnail is 45px by 32px; the mobile footer stacks it below the chapter note. The supplied About portrait, caption, chapter colors and core cover composition remain intact.
 
 ### Technical Toolbox
 
@@ -241,6 +271,8 @@ Large cream editorial type and sage emphasis sit over the preserved background w
 
 ## Do's and Don'ts
 
+The extension was compared with the approved system using `.impeccable/review/destination-desktop.png`, `destination-mobile.png`, `app-photos-desktop.png`, `app-photos-mobile.png` `photo-about-desktop.png` and `app-viewer-desktop.png`. Those captures show the same desktop chrome, cream About cover and user portrait, sage travel surface, evergreen product surface and editorial typography. Exact layout and viewer behavior above are supported by `src/photo-experience.css`, `src/TravelJournal.jsx` and `src/AppScreens.jsx`; the additional viewer capture shows the contained screenshot and Close/Previous/Google Play/Next controls in the native dialog.
+
 ### Do:
 
 - **Do** preserve the Apple logo, existing application icons, project logos, supplied photographs and background artwork.
@@ -248,6 +280,8 @@ Large cream editorial type and sage emphasis sit over the preserved background w
 - **Do** pair story accents with their selected markers and destination actions.
 - **Do** use thin rules and material contrast to organize editorial content.
 - **Do** keep app-store availability and travel entries grounded in supplied or verified content.
+- **Do** label illustrative destination photography and preserve its source, creator, license and crop notice.
+- **Do** display official app screenshots without cropping them inside the device frame or enlarged viewer.
 
 ### Don't:
 
@@ -255,4 +289,3 @@ Large cream editorial type and sage emphasis sit over the preserved background w
 - **Don't** turn Android development into an implied Google Play release.
 - **Don't** invent product metrics or destinations to fill visual space.
 - **Don't** remove focus indicators or ignore reduced-motion behavior.
-

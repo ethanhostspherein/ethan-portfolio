@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-06T08:23:42.539Z",
+  "generatedAt": "2026-10-06T08:47:27.788Z",
   "title": "Design System: Ethan Barman — Personal Editorial Journal",
   "extensions": {
     "colorMeta": {
@@ -439,9 +439,19 @@
         "purpose": "Active desktop window."
       },
       {
-        "name": "postcard",
-        "value": "0 7px 15px #29412615",
-        "purpose": "Ambient travel card lift."
+        "name": "destination-contact-card-hover",
+        "value": "0 5px 15px #193b2228",
+        "purpose": "Small interactive lift on destination cards."
+      },
+      {
+        "name": "android-device",
+        "value": "0 14px 25px #06110950",
+        "purpose": "Official screenshot frame depth."
+      },
+      {
+        "name": "screenshot-viewer",
+        "value": "0 20px 70px #0008",
+        "purpose": "Native enlarged screenshot dialog."
       }
     ],
     "motion": [
@@ -464,6 +474,11 @@
         "name": "chapter-color",
         "value": "color .2s",
         "purpose": "Chapter navigation color changes."
+      },
+      {
+        "name": "destination-contact-card",
+        "value": "box-shadow .2s",
+        "purpose": "Hover lift; disabled by reduced-motion media query."
       }
     ],
     "breakpoints": [
@@ -498,8 +513,74 @@
       "src/personal.css",
       "src/EditorialHome.jsx",
       "src/AppShelf.jsx",
-      "src/TravelJournal.jsx"
-    ]
+      "src/TravelJournal.jsx",
+      "src/AppScreens.jsx",
+      "src/photo-experience.css"
+    ],
+    "photoExtension": {
+      "comparison": "Ordinary extension of the approved editorial journal: existing primitives, typefaces, artwork, portrait and desktop chrome preserved.",
+      "layout": {
+        "destinationHeroHeightDesktop": "230px",
+        "destinationHeroHeightMobile": "270px",
+        "contactSheetColumnsDesktop": 3,
+        "contactSheetColumnsMobile": 2,
+        "appShowcaseColumnsDesktop": "1.15fr 1fr",
+        "appShowcaseGapDesktop": "30px",
+        "deviceMaxWidthDesktop": "190px",
+        "deviceMaxWidthMobile": "170px",
+        "mobileOrder": [
+          "Heading",
+          "App selector",
+          "Official screenshot and controls",
+          "Store link",
+          "Description",
+          "Source note"
+        ]
+      },
+      "viewer": {
+        "element": "dialog",
+        "width": "min(600px, calc(100vw - 32px))",
+        "height": "min(850px, calc(100dvh - 48px))",
+        "borderRadius": "13px",
+        "backdrop": "#06150ed9",
+        "backdropFilter": "blur(7px)",
+        "imageFit": "contain",
+        "controls": [
+          "Close",
+          "Previous",
+          "Google Play",
+          "Next"
+        ]
+      },
+      "evidence": [
+        {
+          "path": ".impeccable/review/destination-desktop.png",
+          "observed": "Sage journal, editorial heading, filter row and selected photographic hero inside unchanged desktop chrome."
+        },
+        {
+          "path": ".impeccable/review/destination-mobile.png",
+          "observed": "Stacked journal heading, wrapped filters and 270px hero with controls below destination name."
+        },
+        {
+          "path": ".impeccable/review/app-photos-desktop.png",
+          "observed": "Evergreen two-column showcase with official Android screenshot beside editorial copy."
+        },
+        {
+          "path": ".impeccable/review/app-photos-mobile.png",
+          "observed": "App selection and screenshot appear before descriptive copy in the mobile viewport."
+        },
+        {
+          "path": ".impeccable/review/photo-about-desktop.png",
+          "observed": "Approved cream/coral cover, supplied portrait and existing chrome preserved; compact travel thumbnail added to footer."
+        },
+        {
+          "path": ".impeccable/review/app-viewer-desktop.png",
+          "observed": "Native enlarged screenshot dialog with a contained portrait screenshot and Close/Previous/Google Play/Next controls."
+        }
+      ],
+      "evidenceLimit": "Source and desktop viewer capture establish the dialog appearance. Parent verification confirmed Escape closes the dialog on desktop and mobile.",
+      "photoPolicy": "Commons destination images are illustrative and credited; existing user portraits, logos and app artwork remain unchanged."
+    }
   },
   "components": [
     {
@@ -527,20 +608,34 @@
       "css": ".ds-shelf-card{min-width:0;background:var(--journal-paper);color:var(--journal-ink);border-radius:10px;overflow:hidden;font-family:\"DM Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif}.ds-shelf-copy{padding:14px}.ds-shelf-copy small{font-size:9px;color:#5a655b}.ds-shelf-copy h2{font-size:17px;margin-top:5px;letter-spacing:-.02em}.ds-shelf-copy p{font-size:11px;line-height:1.6;margin:8px 0 15px;color:#49574e;min-height:53px}.ds-shelf-copy>div{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--journal-rule);padding-top:12px}.ds-shelf-copy a{font-size:11px;font-weight:600;text-decoration:none;color:var(--journal-red)}.ds-shelf-copy a:hover{text-decoration:underline}.ds-shelf-copy a:focus-visible{outline:3px solid #9780f0;outline-offset:4px}"
     },
     {
-      "name": "Travel postcard",
-      "kind": "button",
-      "refersTo": "postcard",
-      "description": "Square postcard button inside alternating ±1 degree entry wrappers; an expanded story appears directly below its card.",
-      "html": "<div class=\"ds-place-entry\"><button class=\"ds-postcard\" aria-expanded=\"true\" aria-controls=\"ds-shimla-story\"><span><strong>Shimla</strong></span></button><div class=\"ds-inline-story\" id=\"ds-shimla-story\"><p>From Ethan’s travel journal.</p></div></div>",
-      "css": " .ds-place-entry{min-width:0;transform:rotate(-1deg)}.ds-postcard{width:100%;display:flex;gap:14px;align-items:center;text-align:left;border:0;border-radius:0;background:#faf7e9;padding:30px 20px;min-height:120px;color:#456042;box-shadow:0 7px 15px #29412615;cursor:pointer}.ds-postcard>span{flex:1}.ds-postcard strong{display:block;font:500 25px Fraunces,Georgia,serif;color:#263c32}.ds-postcard[aria-expanded=true]{outline:2px solid #5f7858;outline-offset:4px}.ds-postcard:focus-visible{outline:3px solid #9780f0;outline-offset:4px}.ds-inline-story{background:#faf7e9;padding:0 20px 22px;font-family:\"DM Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif}.ds-inline-story p{color:#425640;font-size:12px;line-height:1.7}"
-    },
-    {
       "name": "Technical tags",
       "kind": "chip",
       "refersTo": "toolbox-tag",
       "description": "Compact informational tags on a dark technical surface.",
       "html": "<div class=\"ds-toolbox-tags\"><span>React</span><span>Android</span></div>",
       "css": ".ds-toolbox-tags{display:flex;flex-wrap:wrap;gap:6px;padding:12px;background:#192b27;font-family:\"DM Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif}.ds-toolbox-tags span{background:#2d473b;color:#e3ebd1;border-radius:3px;font-size:12px;padding:5px 9px}"
+    },
+    {
+      "name": "Destination filters",
+      "kind": "nav",
+      "description": "Pressed filter selects All places, Hills, Cities or Heritage; existing focus styling is retained.",
+      "html": "<nav class=\"ds-destination-filters\" aria-label=\"Filter destinations\"><button aria-pressed=\"true\">All places</button><button aria-pressed=\"false\">Hills</button><button aria-pressed=\"false\">Cities</button><button aria-pressed=\"false\">Heritage</button></nav>",
+      "css": ".ds-destination-filters{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:20px}.ds-destination-filters button{padding:10px 15px;border:0;border-radius:6px;color:#39513e;background:#d8e2ca;font-family:\"DM Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;font-size:11px;min-height:40px;cursor:pointer}.ds-destination-filters button[aria-pressed=true]{background:#263f34;color:#fff9e9}.ds-destination-filters button:focus-visible{outline:3px solid #9780f0;outline-offset:4px}@media(max-width:759px){.ds-destination-filters{gap:5px}.ds-destination-filters button{padding:9px 10px;min-height:44px}}"
+    },
+    {
+      "name": "Destination contact card",
+      "kind": "button",
+      "refersTo": "destination-contact-card",
+      "description": "Upright paper card beneath the hero; photo omitted from isolated snippet so source and licensing remain with the real gallery.",
+      "html": "<button class=\"ds-contact-card\" aria-pressed=\"true\" aria-label=\"View Kashmir photograph\"><span><strong>Kashmir</strong><small>Kashmir</small></span></button>",
+      "css": ".ds-contact-card{padding:0;text-align:left;background:#faf7e9;border:0;border-radius:7px;overflow:hidden;transition:box-shadow .2s;min-width:0;cursor:pointer;font-family:\"DM Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif}.ds-contact-card:hover{box-shadow:0 5px 15px #193b2228}.ds-contact-card[aria-pressed=true]{outline:2px solid #3c6347;outline-offset:3px}.ds-contact-card:focus-visible{outline:3px solid #9780f0;outline-offset:4px}.ds-contact-card>span{display:block;padding:11px 12px 13px}.ds-contact-card strong{display:block;font-size:13px;color:#243c34}.ds-contact-card small{display:block;font-size:10px;color:#526249;margin-top:4px}@media(prefers-reduced-motion:reduce){.ds-contact-card{transition:none}}"
+    },
+    {
+      "name": "Official app selection",
+      "kind": "nav",
+      "description": "Selection buttons for the two published Android apps; each resets its three-screen carousel.",
+      "html": "<div class=\"ds-app-selection\" aria-label=\"Choose an Android app\"><button aria-pressed=\"true\">JuxTravel</button><button aria-pressed=\"false\">ResIQ</button></div>",
+      "css": ".ds-app-selection{display:flex;gap:7px;margin-top:24px;background:#253e34}.ds-app-selection button{font-family:\"DM Sans\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;font-size:12px;padding:9px 13px;border:1px solid #809681;background:transparent;border-radius:6px;color:#e4ecd9;min-height:40px;cursor:pointer}.ds-app-selection button[aria-pressed=true]{color:#213b2c;background:#d8e5c4;border-color:transparent}.ds-app-selection button:focus-visible{outline:3px solid #9780f0;outline-offset:4px}@media(max-width:759px){.ds-app-selection{margin:0}.ds-app-selection button{min-height:44px}}"
     }
   ],
   "narrative": {
@@ -575,7 +670,9 @@
       "Do retain the functioning desktop controls, accessible keyboard navigation and responsive touch interpretation.",
       "Do pair story accents with their selected markers and destination actions.",
       "Do use thin rules and material contrast to organize editorial content.",
-      "Do keep app-store availability and travel entries grounded in supplied or verified content."
+      "Do keep app-store availability and travel entries grounded in supplied or verified content.",
+      "Do label illustrative destination photography and preserve its source, creator, license and crop notice.",
+      "Do display official app screenshots without cropping them inside the device frame or enlarged viewer."
     ],
     "donts": [
       "Don't replace, recolor or invent identity assets and photographs.",

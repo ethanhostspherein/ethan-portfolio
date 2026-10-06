@@ -97,7 +97,7 @@ Behavior reference: [Apple’s Mac keyboard shortcuts](https://support.apple.com
 
 ## Life, technical toolbox, and Games
 
-Life opens a personal journal with Off the clock, Places, Toolbox, and Little things tabs. Personal interests follow Ethan's supplied portrait. Public Instagram @staybuildtravel supports travel, photography/storytelling and creative AI experiments; the Places journal links the original Shimla (November 2025) and Kainchi Dham (January 2026) posts. Only verified destinations are included. No Facebook account was identified.
+Life opens the Places photo journal, alongside Off the clock, Toolbox, and Little things tabs. Personal interests follow Ethan's supplied portrait. Public Instagram @staybuildtravel supports travel, photography/storytelling and creative AI experiments; the Places journal links the original Shimla (November 2025) and Kainchi Dham (January 2026) posts. Nine additional destinations were supplied directly by Ethan. No Facebook account was identified.
 
 The Toolbox lists JavaScript, TypeScript, HTML, CSS, SQL, React, Next.js, Tailwind CSS, Firebase, Supabase, Node.js, AI-assisted development, Git, GitHub, Vercel, PWAs, quality analysis and networking foundations. Repo technologies, public LinkedIn certifications and Ethan's confirmation of development ownership support this content. No skill percentages or unsupported expertise rankings are used.
 
@@ -106,10 +106,16 @@ Games includes Memory (six pairs, move counter, locally saved best score) and Ti
 Run `npm test` for card-deck integrity and exhaustive computer-opponent checks. Deployment runs these tests before building.
 ## Editorial desktop redesign
 
-Preserves all Apple and app artwork, project previews and supplied photographs. The redesigned login uses a large curiosity statement; About becomes an interactive editorial cover with Builder, Explorer and Play chapters. Work adds an app shelf, Places uses expandable postcards, and Toolbox uses an evergreen developer workspace. Display font Fraunces is self-hosted under the SIL Open Font License; Vite rebases its URL for GitHub Pages.
+Preserves all Apple and app artwork, project previews and supplied photographs. The redesigned login uses a large curiosity statement; About becomes an interactive editorial cover with Builder, Explorer and Play chapters. Work adds an app shelf, Places uses a destination photo gallery, and Toolbox uses an evergreen developer workspace. Display font Fraunces is self-hosted under the SIL Open Font License; Vite rebases its URL for GitHub Pages.
 
 Google Play listings verified directly on 6 October 2026 under Hostsphere India Private Limited:
 - JuxTravel: https://play.google.com/store/apps/details?id=com.hostsphere.juxtravel
 - ResIQ: https://play.google.com/store/apps/details?id=com.hostizzy.resiq
 
 HostSuite Mobile is shown as Android development, without an unverified store link. The journal now includes nine owner-supplied destinations (Amritsar, Manali, McLeod Ganj, Mukteshwar, Kashmir, Mumbai, Haridwar, Kolkata, Guwahati) and the two existing Instagram-verified entries. No dates or original-post links are invented for owner-supplied places.
+
+## Photography and app screenshots
+
+The Places journal contains eleven local WebP destination photographs sourced from Wikimedia Commons, with photographer, source, license, and resizing/cropping disclosure in the gallery. These are illustrative destination photographs, not claimed as Ethan's personal photos or evidence of visiting a specific landmark. Full credits are in `public/travel/credits.json`; each image also has a provenance sidecar. Regional filters, previous/next controls, and a selectable contact sheet browse the collection. About links directly to the photo journal.
+
+Work displays three official Android screenshots each for JuxTravel and ResIQ, sourced from their published Google Play listings. Switch apps, browse screens, and click a screen to open the native modal viewer. The viewer supports previous/next, Close, and Escape, with browser-managed focus. Sources are recorded in `public/app-screens/sources.json`. Images load lazily, and mobile places the app screenshot ahead of supporting copy. Existing logos, application artwork, and supplied portraits are preserved.

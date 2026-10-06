@@ -6,4 +6,5 @@ import "./login.css";
 import "./system.css";
 import "./desktop-tools.css";
 import "./creative.css";
+import "./photo-experience.css";
 createRoot(document.getElementById("root")).render(<App />);

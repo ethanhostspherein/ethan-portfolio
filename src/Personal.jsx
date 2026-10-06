@@ -6,7 +6,7 @@ import "./personal.css";
 import TravelJournal from "./TravelJournal";
 
 export default function Personal({ open }) {
-  const [tab, setTab] = useState("Off the clock");
+  const [tab, setTab] = useState("Places");
 
   const tabs = ["Off the clock", "Places", "Toolbox", "Little things"];
   return (
